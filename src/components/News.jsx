@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable */
 import React from "react";
 
 const logo = "./Orbimatrix-sm.png";

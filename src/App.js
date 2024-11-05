@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { Route, Routes } from "react-router-dom";
 
 // import LandingPage from "pages/LandingPage";
@@ -12,9 +11,10 @@ import News from "./components/News";
 import Field from "./components/Field";
 import dashboard from "./assets/main.png";
 import Footer from "./components/Footer";
-import Timer from "./components/Timer";
 
 import "./assets/css/styles.css";
+import React from "react";
+import Timer from "components/Timer";
 
 function App() {
   const targetDate = "2024-12-31T23:59:59";
