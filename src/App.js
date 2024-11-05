@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Route, Routes } from "react-router-dom";
 
 // import LandingPage from "pages/LandingPage";
@@ -14,7 +15,6 @@ import Footer from "./components/Footer";
 
 import "./assets/css/styles.css";
 import React from "react";
-import Timer from "components/Timer";
 
 function App() {
   const targetDate = "2024-12-31T23:59:59";
