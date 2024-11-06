@@ -12,7 +12,7 @@ import News from "./components/News";
 import Field from "./components/Field";
 import dashboard from "./assets/main.png";
 import Footer from "./components/Footer";
-
+import Timer from "components/Timer";
 import "./assets/css/styles.css";
 import React from "react";
 
@@ -25,7 +25,7 @@ function App() {
         <Field />
         <Timer targetDate={targetDate} />
         <img
-          className="my-12 mx-auto w-image sm:w-morehalf lg:w-half 2xl:w-lesshalf"
+          className="mx-auto my-12 w-image sm:w-morehalf lg:w-half 2xl:w-lesshalf"
           src={dashboard}
           alt="dashboard"
         />
