@@ -1,87 +1,33 @@
-// @ts-nocheck
-
-
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
-import { FaSun, FaMoon } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 import BrandIcon from "./BrandIcon";
+import DiscussButton from "./DiscussButton";
+import ThemeToggle from "./ThemeToggle";
 
 const Button = ({ children, href, className }) => (
-  <a href={href} className={`no-underline  ${className}`}>
+  <a href={href} className={`no-underline ${className}`}>
     {children}
   </a>
 );
 
 const Header = () => {
   const [isCollapse, setIsCollapse] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const location = useLocation();
   const path = location.pathname;
-  const [isDarkMode, setIsDarkMode] = useState(
-    () => localStorage.getItem("theme") === "dark"
-  );
-
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [isDarkMode]);
-
-  const toggleDarkMode = () => {
-    const newMode = !isDarkMode;
-    setIsDarkMode(newMode);
-    document.documentElement.classList.toggle("dark", newMode);
-    localStorage.setItem("theme", newMode ? "dark" : "light"); 
-  };
 
   return (
-    <header className="header flex justify-between px-4 lg:px-0">
-      <div className="flex justify-between items-center">
+    <header className="flex justify-between px-4 header lg:px-0">
+      <div className="flex items-center justify-between">
         <BrandIcon />
         <div className="flex items-center space-x-4">
           <div className="relative lg:hidden">
-            <button
-              className="relative focus:outline-none"
-              onClick={() => setIsDropdownOpen((prev) => !prev)}
-            >
-              {isDarkMode ? (
-                <FaSun className="w-6 h-6 text-yellow-500" />
-              ) : (
-                <FaMoon className="w-6 h-6 text-gray-700" />
-              )}
-            </button>
-
-            <Transition
-              show={isDropdownOpen}
-              enter="transition ease-out duration-200"
-              enterFrom="opacity-0 transform scale-95"
-              enterTo="opacity-100 transform scale-100"
-              leave="transition ease-in duration-100"
-              leaveFrom="opacity-100 transform scale-100"
-              leaveTo="opacity-0 transform scale-95"
-            >
-              <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-50">
-                <ul className="py-1">
-                  <li>
-                    <button
-                      className="block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
-                      onClick={toggleDarkMode}
-                    >
-                      {isDarkMode
-                        ? "Switch to Light Mode"
-                        : "Switch to Dark Mode"}
-                    </button>
-                  </li>
-                </ul>
-              </div>
-            </Transition>
+            <ThemeToggle />
           </div>
 
           <button
             className="block text-theme-blue lg:hidden focus:outline-none"
+            aria-label="Toggle navigation menu"
             onClick={() => setIsCollapse((prev) => !prev)}
           >
             <svg
@@ -110,8 +56,8 @@ const Header = () => {
         </div>
       </div>
 
-      <ul className="hidden text-theme-blue tracking-widest items-center lg:flex flex-row mt-0">
-        {["/", "/team", "/about", "/contact", "/project"].map((link, index) => (
+      <ul className="flex-row items-center hidden mt-0 tracking-widest text-theme-blue lg:flex">
+        {["/", "/team", "/about", "/contact", "/project"].map((link) => (
           <li key={link} className="py-2 lg:py-0">
             <Button
               className={`${
@@ -127,51 +73,12 @@ const Header = () => {
         ))}
 
         <li>
-          <Button
-            className="font-medium text-lg mx-auto ml-3 px-6 py-2 bg-theme-purple text-white rounded-full border-2 border-theme-purple hover:bg-dark-theme-purple border-purple-800 transition duration-200"
-            href="/discuss-project"
-          >
-            Discuss Project
-          </Button>
+          <DiscussButton />
         </li>
 
         <li>
           <div className="relative px-5">
-            <button
-              className="relative focus:outline-none"
-              onClick={() => setIsDropdownOpen((prev) => !prev)}
-            >
-              {isDarkMode ? (
-                <FaSun className="w-6 h-6 text-yellow-500" />
-              ) : (
-                <FaMoon className="w-6 h-6 text-gray-700" />
-              )}
-            </button>
-
-            <Transition
-              show={isDropdownOpen}
-              enter="transition ease-out duration-200"
-              enterFrom="opacity-0 transform scale-95"
-              enterTo="opacity-100 transform scale-100"
-              leave="transition ease-in duration-100"
-              leaveFrom="opacity-100 transform scale-100"
-              leaveTo="opacity-0 transform scale-95"
-            >
-              <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-50">
-                <ul className="py-1">
-                  <li>
-                    <button
-                      className="block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
-                      onClick={toggleDarkMode}
-                    >
-                      {isDarkMode
-                        ? "Switch to Light Mode"
-                        : "Switch to Dark Mode"}
-                    </button>
-                  </li>
-                </ul>
-              </div>
-            </Transition>
+            <ThemeToggle />
           </div>
         </li>
       </ul>
@@ -186,7 +93,7 @@ const Header = () => {
         leaveTo="opacity-0"
       >
         <div className="transition duration-300 ease-in data-[closed]:opacity-0">
-          <ul className="z-50 flex flex-col text-theme-blue tracking-widest my-6 absolute bg-white w-full border-b-2 border-gray-300 lg:hidden">
+          <ul className="absolute z-50 flex flex-col w-full my-6 tracking-widest bg-white border-b-2 border-gray-300 text-theme-blue lg:hidden">
             {["/", "/team", "/about", "/contact", "/project"].map((link) => (
               <li className="py-2 bg-white" key={link}>
                 <Button
@@ -201,13 +108,8 @@ const Header = () => {
                 </Button>
               </li>
             ))}
-            <li className="mx-auto my-9 bg-white">
-              <Button
-                className="font-bold mx-auto px-5 py-2 bg-theme-purple text-white rounded-full border-2 border-theme-purple hover:bg-dark-theme-purple border-purple-800 transition duration-200"
-                href="/discuss-project"
-              >
-                Discuss Project
-              </Button>
+            <li className="mx-auto bg-white my-9">
+              <DiscussButton />
             </li>
           </ul>
         </div>

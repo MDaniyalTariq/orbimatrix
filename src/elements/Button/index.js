@@ -47,6 +47,7 @@ export default function Button({
   return (
     <button
       className={className}
+      // @ts-ignore
       type={type}
       style={style}
       onClick={onClickHandler}
