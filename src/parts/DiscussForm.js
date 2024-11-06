@@ -1,18 +1,9 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable no-useless-escape */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable max-len */
-/* eslint-disable no-trailing-spaces */
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable react/prop-types */
+
 import React from 'react';
 
 import { Fade } from 'react-awesome-reveal';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import * as emailjs from '@emailjs/browser';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { ToastContainer, toast } from 'react-toastify';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import 'react-toastify/dist/ReactToastify.css';
 
 import { Form } from 'elements/Form';

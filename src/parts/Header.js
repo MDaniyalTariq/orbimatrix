@@ -1,10 +1,4 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/button-has-type */
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable import/extensions */
-/* eslint-disable react/prop-types */
-/* eslint-disable import/no-extraneous-dependencies */
+
 
 import React, { useState, useEffect } from "react";
 import { Transition } from "@headlessui/react";

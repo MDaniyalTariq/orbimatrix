@@ -1,7 +1,4 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable react/prop-types */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/jsx-filename-extension */
+
 import React, { useEffect } from 'react';
 
 import Header from 'parts/Header';

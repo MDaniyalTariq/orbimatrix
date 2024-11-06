@@ -1,7 +1,4 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable import/extensions */
-/* eslint-disable react/jsx-filename-extension */
+
 
 import React, { Component } from 'react';
 

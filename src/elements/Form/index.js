@@ -1,8 +1,4 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable object-shorthand */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable react/jsx-filename-extension */
+
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 

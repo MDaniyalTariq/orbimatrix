@@ -1,6 +1,4 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/jsx-filename-extension */
+
 import React, { useState, useEffect } from 'react';
 import { DiscussForm } from 'parts/DiscussForm';
 

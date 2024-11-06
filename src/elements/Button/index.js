@@ -1,10 +1,6 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable react/require-default-props */
-/* eslint-disable react/button-has-type */
-/* eslint-disable react/jsx-filename-extension */
+
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
 
 export default function Button({
