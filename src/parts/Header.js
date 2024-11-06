@@ -16,9 +16,11 @@ const Button = ({ children, href, className }) => (
 const Header = () => {
   const [isCollapse, setIsCollapse] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const location = useLocation();
   const path = location.pathname;
+  const [isDarkMode, setIsDarkMode] = useState(
+    () => localStorage.getItem("theme") === "dark"
+  );
 
   useEffect(() => {
     if (isDarkMode) {
@@ -29,8 +31,10 @@ const Header = () => {
   }, [isDarkMode]);
 
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    document.body.classList.toggle("dark", !isDarkMode);
+    const newMode = !isDarkMode;
+    setIsDarkMode(newMode);
+    document.documentElement.classList.toggle("dark", newMode);
+    localStorage.setItem("theme", newMode ? "dark" : "light"); 
   };
 
   return (
