@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Transition } from "@headlessui/react";
 import { FaSun, FaMoon } from "react-icons/fa";
 
@@ -7,6 +7,7 @@ const ThemeToggle = () => {
     () => localStorage.getItem("theme") === "dark"
   );
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
     if (isDarkMode) {
@@ -23,8 +24,21 @@ const ThemeToggle = () => {
     localStorage.setItem("theme", newMode ? "dark" : "light");
   };
 
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsDropdownOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className="relative">
+    <div className="relative" ref={dropdownRef}>
       <button
         aria-label="Toggle dropdown"
         className="relative focus:outline-none"
