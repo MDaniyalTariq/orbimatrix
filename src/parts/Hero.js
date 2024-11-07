@@ -10,13 +10,13 @@ import BuildWebsite from "../assets/images/hero/BuildWebsite.png";
 export default function Hero() {
   return (
     <section className="hero">
-      <div className="w-full mt-8 lg:w-1/2  sm:pr-2">
+      <div className="w-full mt-8 lg:w-1/2 sm:pr-2">
         <h1 className="mb-5 text-5xl font-bold leading-tight sm:text-6xl text-light-theme-blue">
-          <span className="text-gradient bg-gradient-to-r from-blue-700 to-blue-400 text-transparent bg-clip-text">
+          <span className="text-transparent text-gradient bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text">
             Services{" "}
           </span>
           You{" "}
-          <span className="text-gradient bg-gradient-to-r from-blue-700 to-blue-400 text-transparent bg-clip-text">
+          <span className="text-transparent text-gradient bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text">
             Trust
           </span>
           <br />
@@ -30,7 +30,7 @@ export default function Hero() {
           </span>
         </h1>
 
-        <p className="mb-16 text-xl font-light leading-relaxed text-gray-400">
+        <p className="mb-16 text-xl font-light leading-relaxed dark:text-gray-400">
           We provide developers & designers using latest technologies to help
           you scale up your business.
         </p>
