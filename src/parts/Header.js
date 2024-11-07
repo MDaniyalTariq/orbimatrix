@@ -61,7 +61,9 @@ const Header = () => {
           <li key={link} className="py-2 lg:py-0">
             <Button
               className={`${
-                path === link ? "active-link" : ""
+                path === link
+                  ? "text-theme-purple dark:text-light-theme-purple"
+                  : "text-theme-blue dark:text-secondry-white"
               } font-medium xl:text-lg text-sm px-5`}
               href={link}
             >
