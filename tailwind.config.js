@@ -30,6 +30,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        //bg-gray-50
         "light-theme-purple": "#E3D3FD",
         "theme-purple": "#9C27B0",
         "dark-theme-purple": "#520dc2",
