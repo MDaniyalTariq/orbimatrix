@@ -10,13 +10,13 @@ import BuildWebsite from "../assets/images/hero/BuildWebsite.png";
 export default function Hero() {
   return (
     <section className="hero">
-      <div className="w-full lg:w-1/2 xl:pl-12 sm:pr-2 mt-8">
-        <h1 className="text-5xl sm:text-6xl text-theme-blue font-bold leading-tight mb-5">
+      <div className="w-full mt-8 lg:w-1/2 xl:pl-12 sm:pr-2">
+        <h1 className="mb-5 text-5xl font-bold leading-tight sm:text-6xl text-theme-blue">
           Growing Your Business <br />
           Is Our Calling
         </h1>
-
-        <p className="font-light text-xl text-gray-400 leading-relaxed mb-16">
+ 
+        <p className="mb-16 text-xl font-light leading-relaxed text-gray-400">
           We provide developers & designers using latest technologies to help
           you scale up your business.
         </p>
@@ -24,11 +24,11 @@ export default function Hero() {
           <Button
             href="/project"
             type="link"
-            className="flex w-71 h-18 items-center px-14 py-5 text-white text-xl bg-theme-purple rounded-lg shadow-2xl hover:bg-dark-theme-purple transition duration-200"
+            className="flex items-center py-5 text-xl text-white transition duration-200 rounded-lg shadow-2xl w-71 h-18 px-14 bg-theme-purple hover:bg-dark-theme-purple"
           >
             See Our Work
             <svg
-              className="ml-2 w-7 h-7 text-white animate-bounce-x"
+              className="ml-2 text-white w-7 h-7 animate-bounce-x"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -44,7 +44,7 @@ export default function Hero() {
           </Button>
         </Fade>
       </div>
-      <div className="flex pt-5 md:w-fit w-full justify-center items-center order-first md:order-first lg:order-last lg:w-1/2">
+      <div className="flex items-center justify-center order-first w-full pt-5 md:w-fit md:order-first lg:order-last lg:w-1/2">
         <Fade direction="up" triggerOnce>
           <img className="" src={BuildWebsite} alt="Build Website" />
         </Fade>

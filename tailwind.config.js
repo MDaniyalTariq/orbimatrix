@@ -32,7 +32,11 @@ module.exports = {
       colors: {
         //bg-gray-50
         "light-theme-purple": "#E3D3FD",
-        "theme-purple": "#9C27B0",
+        "theme-purple": "#AB47BC",
+        // "theme-purple": "#280137",
+        // "theme-purple": "#3c0061",
+        // "theme-purple": "#9C27B0", original
+        // "theme-purple": "#800080",
         "dark-theme-purple": "#520dc2",
         "theme-blue": "#152C5B",
         "dark-bg": "#191C27",
