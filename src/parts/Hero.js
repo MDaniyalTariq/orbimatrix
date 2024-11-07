@@ -10,13 +10,13 @@ import BuildWebsite from "../assets/images/hero/BuildWebsite.png";
 export default function Hero() {
   return (
     <section className="hero">
-      <div className="w-full mt-8 lg:w-1/2  sm:pr-2">
+      <div className="w-full mt-8 lg:w-1/2 sm:pr-2">
         <h1 className="mb-5 text-5xl font-bold leading-tight sm:text-6xl text-light-theme-blue">
-          <span className="text-gradient bg-gradient-to-r from-blue-700 to-blue-400 text-transparent bg-clip-text">
+          <span className="text-transparent text-gradient bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text">
             Services{" "}
           </span>
           You{" "}
-          <span className="text-gradient bg-gradient-to-r from-blue-700 to-blue-400 text-transparent bg-clip-text">
+          <span className="text-transparent text-gradient bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text">
             Trust
           </span>
           <br />
@@ -30,7 +30,7 @@ export default function Hero() {
           </span>
         </h1>
 
-        <p className="mb-16 text-xl font-light leading-relaxed text-gray-400">
+        <p className="mb-16 text-xl font-light leading-relaxed dark:text-gray-400">
           We provide developers & designers using latest technologies to help
           you scale up your business.
         </p>
@@ -38,7 +38,7 @@ export default function Hero() {
           <Button
             href="/project"
             type="link"
-            className="flex items-center py-5 text-xl text-white transition duration-200 rounded-lg shadow-2xl w-71 h-18 px-14 bg-theme-purple hover:bg-dark-theme-purple"
+            className="flex items-center py-5 text-xl text-white transition duration-200 shadow-2xl rounded-xl w-71 h-18 px-14 bg-theme-purple hover:bg-dark-theme-purple"
           >
             See Our Work
             <svg
@@ -59,9 +59,6 @@ export default function Hero() {
         </Fade>
       </div>
       <div className="flex items-center justify-center order-first w-full md:w-fit md:order-first lg:order-last lg:w-[43%] ">
-=======
-      <div className="flex items-center justify-center order-first w-full -mt-12 md:w-fit md:order-first lg:order-last lg:w-1/2 ">
->>>>>>> 3c9e3cc0a26d3fdfd66c11d25e8db5061bdd87f6
         <Fade direction="up" triggerOnce>
           <img
             className=""
