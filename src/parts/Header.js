@@ -95,12 +95,15 @@ const Header = () => {
         leaveTo="opacity-0"
       >
         <div className="transition duration-300 ease-in data-[closed]:opacity-0">
-          <ul className="absolute z-50 flex flex-col w-full my-6 tracking-widest bg-white dark:bg-dark-bg border-b-2 border-gray-300 text-theme-blue lg:hidden">
+          <ul className="absolute z-50 flex flex-col w-full my-6 tracking-widest bg-white border-b-2 border-gray-800 dark:bg-dark-bg text-theme-blue lg:hidden">
             {["/", "/team", "/about", "/contact", "/project"].map((link) => (
               <li className="py-2 bg-white dark:bg-dark-bg" key={link}>
                 <Button
                   className={`${
-                    path === link ? "active-link" : ""
+                    path === link
+                      ? "text-theme-purple dark:text-theme-purple "
+                      : "text-theme-blue dark:text-secondry-white"
+                    // path === link ? "active-link" : ""
                   } font-medium px-10`}
                   href={link}
                 >
@@ -110,7 +113,7 @@ const Header = () => {
                 </Button>
               </li>
             ))}
-            <li className="mx-auto bg-white my-9">
+            <li className="mx-auto my-9">
               <DiscussButton />
             </li>
           </ul>
