@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from "react";
 
 import { Fade } from "react-awesome-reveal";
@@ -10,9 +11,9 @@ export default function Hero() {
   return (
     <section className="hero">
       <div className="w-full mt-8 lg:w-1/2 xl:pl-12 sm:pr-2">
-        <h1 className="mb-5 text-5xl font-bold leading-tight sm:text-6xl dark:text-light-theme-blue text-light-theme-blue">
-          Growing your business <br />
-          Is our calling
+        <h1 className="mb-5 text-5xl font-bold leading-tight sm:text-6xl text-light-theme-blue">
+          Growing Your Business <br />
+          Is Our Calling
         </h1>
 
         <p className="mb-16 text-xl font-light leading-relaxed text-gray-400">
