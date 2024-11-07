@@ -26,7 +26,7 @@ const Header = () => {
           </div>
 
           <button
-            className="block text-theme-blue lg:hidden focus:outline-none"
+            className="block text-theme-purple lg:hidden focus:outline-none"
             aria-label="Toggle navigation menu"
             onClick={() => setIsCollapse((prev) => !prev)}
           >
@@ -95,7 +95,7 @@ const Header = () => {
         leaveTo="opacity-0"
       >
         <div className="transition duration-300 ease-in data-[closed]:opacity-0">
-          <ul className="absolute z-50 flex flex-col w-full my-6 tracking-widest bg-white border-b-2 border-gray-800 dark:bg-dark-bg text-theme-blue lg:hidden">
+          <ul className="absolute z-50 flex flex-col w-full my-6 tracking-widest bg-white border-b-2 dark:border-gray-800 dark:bg-dark-bg text-theme-blue lg:hidden">
             {["/", "/team", "/about", "/contact", "/project"].map((link) => (
               <li className="py-2 bg-white dark:bg-dark-bg" key={link}>
                 <Button
