@@ -56,7 +56,7 @@ const Header = () => {
         </div>
       </div>
 
-      <ul className="flex-row items-center hidden mt-0 tracking-widest text-theme-blue lg:flex">
+      <ul className="flex-row items-center hidden mt-0 tracking-widest text-theme-blue dark:text-secondry-white lg:flex">
         {["/", "/team", "/about", "/contact", "/project"].map((link) => (
           <li key={link} className="py-2 lg:py-0">
             <Button

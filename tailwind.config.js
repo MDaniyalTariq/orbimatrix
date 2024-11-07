@@ -44,6 +44,7 @@ module.exports = {
         // "dark-bg": "#151922",
         // "dark-bg": "#0B0B0B",
         "primary-white": "#d4dae6",
+        "secondry-white": "#e1e7f0",
       },
       margin: {
         "-112": "-28rem",

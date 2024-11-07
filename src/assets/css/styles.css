@@ -14,7 +14,7 @@ html.dark {
 }
 
 .active-link {
-  @apply text-theme-purple;
+  @apply text-light-theme-purple;
 }
 
 .header {
