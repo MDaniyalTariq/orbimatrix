@@ -38,7 +38,7 @@ export default function Hero() {
           <Button
             href="/project"
             type="link"
-            className="flex items-center py-5 text-xl text-white transition duration-200 rounded-lg shadow-2xl w-71 h-18 px-14 bg-theme-purple hover:bg-dark-theme-purple"
+            className="flex items-center py-5 text-xl text-white transition duration-200 shadow-2xl rounded-xl w-71 h-18 px-14 bg-theme-purple hover:bg-dark-theme-purple"
           >
             See Our Work
             <svg
@@ -58,7 +58,7 @@ export default function Hero() {
           </Button>
         </Fade>
       </div>
-      <div className="flex items-center justify-center order-first w-full md:w-fit md:order-first lg:order-last lg:w-1/2 ">
+      <div className="flex items-center justify-center order-first w-full -mt-12 md:w-fit md:order-first lg:order-last lg:w-1/2 ">
         <Fade direction="up" triggerOnce>
           <img
             className=""
