@@ -39,6 +39,8 @@ module.exports = {
         // "theme-purple": "#800080",
         "dark-theme-purple": "#520dc2",
         "theme-blue": "#152C5B",
+        "light-theme-blue": "#2B4690",
+        // "theme-blue": "#152C5B", original
         "dark-bg": "#191C27",
         // "dark-bg": "#212529",
         // "dark-bg": "#151922",
