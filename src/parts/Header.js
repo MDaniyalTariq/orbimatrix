@@ -62,7 +62,7 @@ const Header = () => {
             <Button
               className={`${
                 path === link
-                  ? "text-theme-purple dark:text-light-theme-purple"
+                  ? "text-theme-purple dark:text-theme-purple "
                   : "text-theme-blue dark:text-secondry-white"
               } font-medium xl:text-lg text-sm px-5`}
               href={link}
