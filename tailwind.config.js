@@ -34,7 +34,10 @@ module.exports = {
         "theme-purple": "#9C27B0",
         "dark-theme-purple": "#520dc2",
         "theme-blue": "#152C5B",
-        "dark-bg": "#1f1f1f",
+        "dark-bg": "#191C27",
+        // "dark-bg": "#212529",
+        // "dark-bg": "#151922",
+        // "dark-bg": "#0B0B0B",
       },
       margin: {
         "-112": "-28rem",
