@@ -58,7 +58,7 @@ export default function Hero() {
           </Button>
         </Fade>
       </div>
-      <div className="flex items-center justify-center order-first w-full md:w-fit md:order-first lg:order-last lg:w-1/2 ">
+      <div className="flex items-center justify-center order-first w-full md:w-fit md:order-first lg:order-last lg:w-[43%] ">
         <Fade direction="up" triggerOnce>
           <img
             className=""
