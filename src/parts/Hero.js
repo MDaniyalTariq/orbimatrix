@@ -1,4 +1,3 @@
-
 import React from "react";
 
 import { Fade } from "react-awesome-reveal";
@@ -15,7 +14,7 @@ export default function Hero() {
           Growing Your Business <br />
           Is Our Calling
         </h1>
- 
+
         <p className="mb-16 text-xl font-light leading-relaxed text-gray-400">
           We provide developers & designers using latest technologies to help
           you scale up your business.

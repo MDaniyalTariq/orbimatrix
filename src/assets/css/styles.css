@@ -17,7 +17,7 @@
   background-color: #e1e7f0;
 }
 html.dark ::-webkit-scrollbar-thumb {
-  background-color: #7c3aed;
+  background-color: #ab47bc;
   border-radius: 5px;
 }
 
@@ -28,11 +28,11 @@ section {
   @apply mb-28;
 }
 html {
-  @apply bg-white text-gray-900;
+  @apply text-gray-900 bg-white;
 }
 
 html.dark {
-  @apply bg-dark-bg text-white;
+  @apply text-white bg-dark-bg;
 }
 
 .active-link {
@@ -43,11 +43,11 @@ html.dark {
 }
 
 .header {
-  @apply flex flex-col py-4 mb-4 justify-between;
+  @apply flex flex-col justify-between py-4 mb-4;
 }
 
 .hero {
-  @apply container px-5 flex flex-col mx-auto;
+  @apply container flex flex-col px-5 mx-auto;
 }
 
 .portofolio-card:hover .img-hover {
@@ -56,7 +56,7 @@ html.dark {
 
 @media (min-width: 1024px) {
   .header {
-    @apply container w-full flex-row py-8 px-10 mt-2 mb-4 mx-auto items-center content-center border-b border-gray-100;
+    @apply container flex-row items-center content-center w-full px-10 py-8 mx-auto mt-2 mb-4 border-b border-gray-100;
   }
 
   .hero {
