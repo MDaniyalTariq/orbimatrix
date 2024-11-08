@@ -27,17 +27,19 @@ export default function Service({ data }) {
               key={index}
               triggerOnce
             >
-              <div>
-                <div className="transition duration-500 transform bg-white border shadow-2xl group rounded-2xl border-light-theme-purple hover:scale-105">
-                  <img
-                    src={item.imageUrl}
-                    alt="Service"
-                    className="w-full rounded-t-2xl"
-                  />
-                  <h2 className="text-xl text-center text-theme-blue py-7 rounded-b-2xl">
-                    {item.title}
-                  </h2>
+              <div className="transition duration-500 transform  border shadow-2xl group rounded-2xl border-light-theme-purple hover:scale-105 relative overflow-hidden">
+                <img
+                  src={item.imageUrl}
+                  alt="Service"
+                  className="w-full rounded-t-2xl"
+                />
+
+                <div className="absolute inset-0 bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6">
+                  <p className="text-lg text-center">{item.description}</p>
                 </div>
+                <h2 className="text-xl text-center text-theme-blue py-7 rounded-b-2xl">
+                  {item.title}
+                </h2>
               </div>
             </Fade>
           ))}

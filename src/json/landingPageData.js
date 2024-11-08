@@ -41,6 +41,7 @@ export const Services = [
     title: "Web Development",
     imageUrl: Web,
     animation: "left",
+    description: "this is description",
   },
   {
     title: "Smart Contracts",
