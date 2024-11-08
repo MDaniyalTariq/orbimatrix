@@ -65,6 +65,7 @@ export const Services = [
     title: "Smart Contracts & Auditing",
     imageUrl: smart,
     animation: "up",
+    animation: "up",
     description:
       "Build secure and efficient smart contracts that automate transactions, streamline processes, and enhance trust in blockchain environments.",
   },

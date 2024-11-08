@@ -35,9 +35,10 @@ export default function Portfolio({ data }) {
                   <img
                     src={item.imageUrl}
                     alt="Portfolio"
-                    className="z-0 rounded-t-2xl"
+                    className=""
                   />
-                  <div className="absolute top-0 flex justify-center w-full h-full bg-black rounded-b opacity-0 rounded-t-2xl img-hover">
+                  <div className="absolute top-0 flex justify-center w-full h-full bg-black rounded-b opacity-0 rounded-t-2xl ">  
+                     //img-hover
                     <button className="focus:outline-none">
                       <svg
                         className="w-20 h-20 text-gray-200"
