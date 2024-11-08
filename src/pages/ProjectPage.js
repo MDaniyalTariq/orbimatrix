@@ -1,13 +1,13 @@
+import React, { Component } from "react";
 
-import React, { Component } from 'react';
+import Header from "parts/Header";
+import HeroPortfolio from "parts/HeroPortfolio";
+import Discuss from "parts/Discuss";
+import Footer from "parts/Footer";
+import AllPortfolio from "parts/AllPortfolio";
 
-import Header from 'parts/Header';
-import HeroPortfolio from 'parts/HeroPortfolio';
-import Discuss from 'parts/Discuss';
-import Footer from 'parts/Footer';
-import AllPortfolio from 'parts/AllPortfolio';
-
-import { Portfolios } from 'json/landingPageData';
+import { Portfolios } from "json/landingPageData";
+import HorizontalScrollBar from "components/HorizontalScrollBar";
 
 export default class ProjectPage extends Component {
   componentDidMount() {
@@ -17,6 +17,7 @@ export default class ProjectPage extends Component {
   render() {
     return (
       <>
+        <HorizontalScrollBar />
         <Header />
         <HeroPortfolio />
         <AllPortfolio data={Portfolios} />

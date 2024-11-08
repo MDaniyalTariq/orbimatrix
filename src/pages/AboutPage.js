@@ -7,6 +7,7 @@ import { Fade } from "react-awesome-reveal";
 import { Swiper } from "swiper";
 import "swiper/css/bundle";
 
+import HorizontalScrollBar from "components/HorizontalScrollBar";
 export const AboutPage = () => {
   useEffect(() => {
     const script1 = document.createElement("script");
@@ -127,6 +128,7 @@ export const AboutPage = () => {
 
   return (
     <>
+      <HorizontalScrollBar />
       <Header />
 
       <section className="relative ">
