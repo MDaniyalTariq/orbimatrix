@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../elements/Button";
 
-const logoPath = "./Orbimatrix-sm.png";
+const logoPath = process.env.PUBLIC_URL + "/Orbimatrix-sm.png";
 
 export default function BrandIcon() {
   return (
