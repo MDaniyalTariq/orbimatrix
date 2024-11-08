@@ -3,25 +3,31 @@ import { Transition } from "@headlessui/react";
 import { FaSun, FaMoon } from "react-icons/fa";
 
 const ThemeToggle = () => {
-  const [isDarkMode, setIsDarkMode] = useState(
-    () => localStorage.getItem("theme") === "dark"
-  );
+  const storedTheme = localStorage.getItem("theme");
+  const defaultTheme = storedTheme ? storedTheme : "dark"; 
+  const [isDarkMode, setIsDarkMode] = useState(defaultTheme === "dark");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
   useEffect(() => {
-    if (isDarkMode) {
+    if (defaultTheme === "dark") {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
-  }, [isDarkMode]);
+  }, [defaultTheme]);
 
   const toggleDarkMode = () => {
-    const newMode = !isDarkMode;
-    setIsDarkMode(newMode);
-    document.documentElement.classList.toggle("dark", newMode);
-    localStorage.setItem("theme", newMode ? "dark" : "light");
+    const newTheme = isDarkMode ? "light" : "dark";
+
+    if (newTheme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+
+    setIsDarkMode(!isDarkMode);
+    localStorage.setItem("theme", newTheme);
   };
 
   const handleClickOutside = (event) => {
