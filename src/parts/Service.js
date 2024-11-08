@@ -7,13 +7,13 @@ export default function Service({ data }) {
     <div className="">
       <div className="container pt-20 mx-auto pb-28">
         <Fade direction="right" triggerOnce>
-          <h1 className="text-5xl font-bold text-center bg-gradient-heading bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold text-center text-transparent bg-gradient-heading bg-clip-text ">
             Our Services
           </h1>
         </Fade>
         <Fade direction="left" triggerOnce>
           <p className="mb-12 text-lg font-light text-center dark:text-gray-400">
-            We’re prepared to accelerate your business growth with our top-notch
+            We're prepared to accelerate your business growth with our top-notch
             services.
           </p>
         </Fade>
@@ -27,17 +27,15 @@ export default function Service({ data }) {
               key={index}
               triggerOnce
             >
-              <div>
-                <div className="transition duration-500 transform bg-white border shadow-2xl group rounded-2xl border-light-theme-purple hover:scale-105">
-                  <img
-                    src={item.imageUrl}
-                    alt="Service"
-                    className="w-full rounded-t-2xl"
-                  />
-                  <h2 className="text-xl text-center text-theme-blue py-7 rounded-b-2xl">
-                    {item.title}
-                  </h2>
-                </div>
+              <div className="transition duration-500 transform bg-[#272B36] border border-gray-600 shadow-xl group rounded-xl hover:scale-105 hover:shadow-2xl hover:rotate-1 max-w-xs m-auto">
+                <img
+                  src={item.imageUrl}
+                  alt="Service"
+                  // className="object-cover w-full h-48 rounded-t-xl"
+                />
+                <h2 className="px-3 py-5 text-lg text-center text-white transition-colors duration-300 rounded-b-xl group-hover:text-theme-blue">
+                  {item.title}
+                </h2>
               </div>
             </Fade>
           ))}
