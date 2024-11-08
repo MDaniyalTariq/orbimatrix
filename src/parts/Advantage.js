@@ -23,7 +23,7 @@ export default function Advantage({ data }) {
             {data[0].map((item, index) => (
               <Fade bottom triggerOnce delay={500 * index} key={index}>
                 <div>
-                  <div className="flex flex-row items-center p-3 mx-3 my-6 transition duration-500 transform bg-[#F5F5F5] border shadow-xl sm:my-7 sm:mx-3 xl:my-14 xl:mx-7 rounded-2xl border-light-theme-purple hover:scale-105">
+                  <div className="flex flex-row items-center p-3 mx-3 my-6 transition duration-500 transform  border shadow-xl sm:my-7 sm:mx-3 xl:my-14 xl:mx-7 rounded-2xl border-light-theme-purple hover:scale-105">
                     <img src={item.imageUrl} alt="" className="w-1/3" />
                     <div className="flex-col pl-5">
                       <h2 className="text-2xl text-transparent  bg-gradient-heading bg-clip-text">
@@ -42,7 +42,7 @@ export default function Advantage({ data }) {
             {data[1].map((item, index) => (
               <Fade bottom triggerOnce delay={500 * index} key={index}>
                 <div>
-                  <div className="flex flex-row items-center p-3 mx-3 my-6 transition duration-500 transform bg-[#F5F5F5] border shadow-xl sm:my-7 sm:mx-3 xl:my-14 xl:mx-7 rounded-2xl border-light-theme-purple hover:scale-105">
+                  <div className="flex flex-row items-center p-3 mx-3 my-6 transition duration-500 transform border shadow-xl sm:my-7 sm:mx-3 xl:my-14 xl:mx-7 rounded-2xl border-light-theme-purple hover:scale-105">
                     <img src={item.imageUrl} alt="" className="w-1/3" />
                     <div className="flex-col pl-5">
                       <h2 className="text-2xl text-transparent  bg-gradient-heading bg-clip-text">

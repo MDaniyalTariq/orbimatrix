@@ -5,6 +5,7 @@ import { smallSphere, stars } from "../assets";
 import Accordion from "./Accordian";
 import Heading from "./Heading";
 import React from "react";
+
 const accData = [
   {
     title: "What is the cost to participate?",
@@ -17,15 +18,14 @@ const accData = [
   {
     title: "How are the Solana tokens distributed?",
     content:
-      "The collected tokens are divided among the winners according to the specified percentages.",
+      "The collected tokens are divided among the winners according to the specified percentages.",
   },
 ];
+
 const FAQ = () => {
   return (
     <Section
-      // @ts-ignore
-      Section
-      className="overflow-hidden"
+      className="overflow-hidden px-4 sm:px-8 md:px-16 lg:px-24"
       id="pricing"
     >
       <div className="container relative z-2">
@@ -48,20 +48,23 @@ const FAQ = () => {
           </div>
         </div>
         <Heading
-          tag="Frequently Asked Questions about WishingWellet"
+          tag="Frequently Asked Questions about OrbiMatrix"
           title="Frequently Asked Questions"
+          className="text-center mb-8"
         />
         <div className="mx-auto flex w-full flex-col items-center justify-center">
-          <div className="h-[2px] w-full bg-gradient-to-l from-[#1E2230] to-[rgba(30, 34, 48, 0)]]"></div>
+          <div className="h-[2px] w-full dark:bg-gradient-to-l from-[#1E2230] to-[rgba(30, 34, 48, 0)] mb-4"></div>
 
-          {accData.map((acc, index) => {
-            return (
-              <div className="w-full" key={index}>
-                <Accordion title={acc.title} content={acc.content} />
-                <div className="h-[2px] w-full bg-gradient-to-l from-[#1E2230] to-[rgba(30, 34, 48, 0)]]"></div>
-              </div>
-            );
-          })}
+          <div className="w-full max-w-4xl space-y-4">
+            {accData.map((acc, index) => {
+              return (
+                <div className="w-full" key={index}>
+                  <Accordion title={acc.title} content={acc.content} />
+                  <div className="h-[2px] w-full dark:bg-gradient-to-l from-[#1E2230] to-[rgba(30, 34, 48, 0)] mt-4"></div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </Section>

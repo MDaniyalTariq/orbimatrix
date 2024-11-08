@@ -23,7 +23,9 @@ import Favorite from "../assets/images/Advantages/Favorite.png";
 // Testimonials
 import Sasha from "../assets/images/Testimonials/Sasha.jpg";
 import Reiner from "../assets/images/Testimonials/Reiner.jpg";
-import Kruger from "../assets/images/Testimonials/Kruger.jpg";
+import Vincent from "../assets/images/Testimonials/Vincent.png";
+import Jake from "../assets/images/Testimonials/Jake.png";
+import Suleman from "../assets/images/Testimonials/Suleman.png";
 
 // TeamMembers
 import CEO from "../assets/images/TeamMembers/CEO.jpg";
@@ -171,26 +173,42 @@ export const Advantages = [
 export const Testimonials = [
   {
     id: 1,
-    name: "Sasha Rose",
-    company: "Owner, Surveyor Corps",
+    name: "Jake harmer",
+    company: "CEO, familyhistorystorybooks",
     testimoni:
-      "Thanks for Racxstudio, you guys are the best! Keep up the great work!",
+      "Excellent to work with the creator. He knows what he's doing and was able to match what I needed.",
     imageUrl: Sasha,
   },
   {
     id: 2,
-    name: "Kruger Khan",
-    company: "Director, Shultan Oil",
+    name: "Aman Kumar",
+    company: "Developer",
     testimoni:
-      "I just wanted to let you know that it’s been great working with Racxstudio.",
-    imageUrl: Kruger,
+      "I loved the quick turnaround time and delivered exactly what I needed. will definitely work again.",
+    imageUrl: Jake,
   },
   {
     id: 3,
-    name: "Reiner John",
-    company: "CEO, Marley CO",
-    testimoni: "Racxstudio is so great. Thank you so much for a job well done.",
+    name: "Thomas",
+    company: "Smart Contract Developer",
+    testimoni: "Found a solution quickly.",
     imageUrl: Reiner,
+  },
+  {
+    id: 4,
+    name: "Muhammad Suleman",
+    company: "Video Editor",
+    testimoni:
+      "Professional, reliable, and always on point—this team delivers every time.",
+    imageUrl: Suleman,
+  },
+  {
+    id: 5,
+    name: "Vincent Companaro",
+    company: "Founder and President, CHURN",
+    testimoni:
+      "Saqib is an exceptional engineer with a proactive approach, consistently exceeding expectations and taking initiative to tackle challenges effectively.",
+    imageUrl: Vincent,
   },
 ];
 
