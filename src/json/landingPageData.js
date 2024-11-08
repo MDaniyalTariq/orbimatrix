@@ -43,12 +43,27 @@ export const Services = [
     animation: "left",
   },
   {
-    title: "Mobile Development",
-    imageUrl: Mobile,
+    title: "Smart Contracts",
+    imageUrl: Web,
     animation: "up",
   },
   {
-    title: "UI/UX Design",
+    title: "Smart Contract Auditing",
+    imageUrl: Web,
+    animation: "right",
+  },
+  {
+    title: "Web3 Games",
+    imageUrl: Mobile,
+    animation: "left",
+  },
+  {
+    title: "Chatbots Making",
+    imageUrl: UIUX,
+    animation: "up",
+  },
+  {
+    title: "AI Custom Solutions",
     imageUrl: UIUX,
     animation: "right",
   },
