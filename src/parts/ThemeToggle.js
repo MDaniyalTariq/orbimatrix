@@ -38,7 +38,7 @@ const ThemeToggle = () => {
   }, []);
 
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div className="relative z-50" ref={dropdownRef}>
       <button
         aria-label="Toggle dropdown"
         className="relative focus:outline-none"

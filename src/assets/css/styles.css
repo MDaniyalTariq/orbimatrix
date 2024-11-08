@@ -29,6 +29,7 @@ section {
 }
 html {
   @apply text-gray-900 bg-white;
+  overflow-x: hidden;
 }
 
 html.dark {

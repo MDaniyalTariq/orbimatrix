@@ -9,7 +9,7 @@ import TeamPage from "pages/TeamPage";
 
 import { ProjectDetailPage } from "pages/ProjectDetailPage";
 import { DiscussProjectPage } from "pages/DiscussProjectPage";
-
+import { AboutPage } from "pages/AboutPage";
 import "./assets/css/styles.css";
 import React from "react";
 
@@ -22,7 +22,7 @@ function App() {
         <Route path="/project" element={<ProjectPage />} />
         <Route exact path="/project/:id" element={<ProjectDetailPage />} />
         <Route exact path="/team" element={<TeamPage />} />
-        <Route exact path="/about" element={<TeamPage />} />
+        <Route exact path="/about" element={<AboutPage />} />
         <Route exact path="/contact" element={<TeamPage />} />
         <Route exact path="/discuss-project" element={<DiscussProjectPage />} />
         <Route path="**" element={<NotFoundPage />} />
