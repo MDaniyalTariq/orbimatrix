@@ -3,8 +3,6 @@
 
 import { fontFamily as _fontFamily } from "tailwindcss/defaultTheme";
 
-// const defaultTheme = require('tailwindcss/defaultTheme');
-
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: "class", // or 'media' or 'class'
@@ -30,21 +28,12 @@ module.exports = {
     },
     extend: {
       colors: {
-        //bg-gray-50
         "light-theme-purple": "#E3D3FD",
         "theme-purple": "#AB47BC",
-        // "theme-purple": "#280137",
-        // "theme-purple": "#3c0061",
-        // "theme-purple": "#9C27B0", original
-        // "theme-purple": "#800080",
         "dark-theme-purple": "#520dc2",
         "theme-blue": "#152C5B",
         "light-theme-blue": "#2B4690",
-        // "theme-blue": "#152C5B", original
         "dark-bg": "#191C27",
-        // "dark-bg": "#212529",
-        // "dark-bg": "#151922",
-        // "dark-bg": "#0B0B0B",
         "primary-white": "#d4dae6",
         "secondry-white": "#e1e7f0",
       },
@@ -75,6 +64,15 @@ module.exports = {
         192: "48rem",
         192.5: "49.5rem",
         193: "51rem",
+      },
+      textColor: {
+        "gradient-heading": "transparent", 
+      },
+      backgroundImage: {
+        "gradient-heading": "linear-gradient(to right, #1D4ED8, #3B82F6)", 
+      },
+      backgroundClip: {
+        text: "text", 
       },
     },
   },

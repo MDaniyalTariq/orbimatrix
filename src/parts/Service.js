@@ -7,7 +7,7 @@ export default function Service({ data }) {
     <div className="">
       <div className="container pt-20 mx-auto pb-28">
         <Fade direction="right" triggerOnce>
-          <h1 className="text-5xl font-bold text-center text-light-theme-blue">
+          <h1 className="text-5xl font-bold text-center bg-gradient-heading bg-clip-text text-transparent">
             Our Services
           </h1>
         </Fade>
