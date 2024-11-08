@@ -10,7 +10,6 @@ const HorizontalScrollBar = () => {
         document.documentElement.scrollHeight - window.innerHeight;
 
       const scrollPercent = (scrollTop / docHeight) * 100;
-
       setScrollWidth(scrollPercent);
     };
 
@@ -24,9 +23,10 @@ const HorizontalScrollBar = () => {
   return (
     <div className="fixed z-50 top-0 left-0 w-full h-1 bg-gray-300 dark:bg-[#2d3748]">
       <div
-        className="h-full bg-blue-500 transition-all duration-200 ease-in-out"
+        className="h-full bg-blue-500"
         style={{
           width: `${scrollWidth}%`,
+          transition: "width 0.2s ease-out", 
         }}
       />
     </div>
