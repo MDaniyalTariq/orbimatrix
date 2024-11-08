@@ -30,14 +30,14 @@ export default class LandingPage extends Component {
           </div>
           <span className="w-4/12 lg:w-2/12 aspect-square bg-gradient-to-tr from-blue-600 to-green-400 absolute -top-5 lg:left-0 rounded-full skew-y-12 blur-2xl opacity-40 skew-x-12 rotate-90" />
           <Header />
-          <Hero />
-          <Service data={Services} />
-          <Portfolio data={Portfolios} />
-          <Advantage data={Advantages} />
-          <Testimonial data={Testimonials} />
-          <Discuss />
-          <Footer />
         </section>
+        <Hero />
+        <Service data={Services} />
+        <Portfolio data={Portfolios} />
+        <Advantage data={Advantages} />
+        <Testimonial data={Testimonials} />
+        <Discuss />
+        <Footer />
       </>
     );
   }
