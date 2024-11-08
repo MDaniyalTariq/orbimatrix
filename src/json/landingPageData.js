@@ -1,7 +1,10 @@
 // Services Img Imports
 import Web from "../assets/images/Services/Web.png";
 import Mobile from "../assets/images/Services/Mobile.png";
-import UIUX from "../assets/images/Services/Design.png";
+import UIUX from "../assets/images/Services/ai.png";
+import web3 from "../assets/images/Services/web3.png";
+import smart from "../assets/images/Services/smart.png";
+import chatbot from "../assets/images/Services/chatbot.png";
 
 // Portfolio Img Imports
 import Recruiting from "../assets/images/Portfolio/Recruiting.png";
@@ -53,14 +56,14 @@ export const Services = [
   },
   {
     title: "Web3 Games",
-    imageUrl: Mobile,
+    imageUrl: web3,
     animation: "left",
     description:
       "Develop immersive Web3 games that integrate blockchain technology, offering unique in-game assets, decentralized economies, and player-owned experiences.",
   },
   {
     title: "Smart Contracts & Auditing",
-    imageUrl: Web,
+    imageUrl: smart,
     animation: "up",
     description:
       "Build secure and efficient smart contracts that automate transactions, streamline processes, and enhance trust in blockchain environments.",
@@ -68,7 +71,7 @@ export const Services = [
 
   {
     title: "Chatbots Making",
-    imageUrl: UIUX,
+    imageUrl: chatbot,
     animation: "up",
     description:
       "Create intelligent chatbots designed to enhance customer interactions, automate responses, and provide real-time support across various platforms.",
@@ -76,7 +79,7 @@ export const Services = [
 
   {
     title: "Mobile Development",
-    imageUrl: UIUX,
+    imageUrl: Mobile,
     animation: "right",
     description:
       "Leverage cutting-edge AI technology to build tailored solutions that address specific business challenges, improve decision-making, and optimize workflows.",
