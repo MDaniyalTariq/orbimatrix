@@ -65,7 +65,6 @@ export const Services = [
     title: "Smart Contracts & Auditing",
     imageUrl: smart,
     animation: "up",
-    animation: "up",
     description:
       "Build secure and efficient smart contracts that automate transactions, streamline processes, and enhance trust in blockchain environments.",
   },
@@ -144,26 +143,27 @@ export const Advantages = [
     {
       title: "Communicative",
       description:
-        "We communicate our project ideas and progress to make it clear.",
+        "We keep you informed at every stage, ensuring clarity and transparency.",
       imageUrl: Communicative,
     },
     {
       title: "Management",
       description:
-        "We manage our project properly to make our project done well.",
+        "Effective project management that drives timely, successful outcomes.",
       imageUrl: Management,
     },
   ],
   [
     {
-      title: "Collaborative​",
+      title: "Collaborative",
       description:
-        "Our team are very collaborative to make our project done well.",
+        "Our team collaborates seamlessly to achieve exceptional results.",
       imageUrl: Collaborative,
     },
     {
-      title: "Favorite",
-      description: "We've did so many project and all of our client love it.",
+      title: "Client-Favorite",
+      description:
+        "Trusted by clients for consistently delivering outstanding work.",
       imageUrl: Favorite,
     },
   ],
