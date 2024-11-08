@@ -154,7 +154,7 @@ export const AboutPage = () => {
               <div className="img-box">
                 <Fade direction="left" triggerOnce>
                   <img
-                    src="/orbi-logo.png"
+                    src="/Orbimatrix-sm.png"
                     alt="About Us tailwind page"
                     width={400}
                     className="max-lg:mx-auto"
