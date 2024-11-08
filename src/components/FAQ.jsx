@@ -25,11 +25,11 @@ const accData = [
 const FAQ = () => {
   return (
     <Section
-      className="overflow-hidden px-4 sm:px-8 md:px-16 lg:px-24"
+      className="flex justify-center items-centeroverflow-hidden px-4 sm:px-8 md:px-16 lg:px-24"
       id="pricing"
     >
       <div className="container relative z-2">
-        <div className="hidden relative justify-center mb-[6.5rem] lg:flex">
+        {/* <div className="hidden relative justify-center mb-[6.5rem] lg:flex">
           <img
             src={smallSphere}
             className="relative z-1"
@@ -46,7 +46,7 @@ const FAQ = () => {
               alt="Stars"
             />
           </div>
-        </div>
+        </div> */}
         <Heading
           tag="Frequently Asked Questions about OrbiMatrix"
           title="Frequently Asked Questions"
