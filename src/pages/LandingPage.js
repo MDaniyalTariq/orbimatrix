@@ -15,7 +15,7 @@ import Testimonial from "parts/Testimonial";
 import Discuss from "parts/Discuss";
 import Footer from "parts/Footer";
 import HorizontalScrollBar from "components/HorizontalScrollBar";
-
+import FAQ from "../components/FAQ";
 export default class LandingPage extends Component {
   componentDidMount() {
     window.scrollTo(0, 0);
@@ -38,6 +38,7 @@ export default class LandingPage extends Component {
         <Portfolio data={Portfolios} />
         <Advantage data={Advantages} />
         <Testimonial data={Testimonials} />
+        <FAQ />
         <Discuss />
         <Footer />
       </>
