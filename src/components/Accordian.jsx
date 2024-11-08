@@ -10,7 +10,7 @@ const Accordion = ({ title, content }) => {
       onClick={toggleExpanded}
     >
       <div className="flex h-16 select-none flex-row items-center justify-between text-left md:h-16">
-        <h5 className="flex-1 text-sm font-normal leading-tight sm:text-lg md:text-lg">
+        <h5 className="flex-1 text-sm font-normal leading-tight sm:text-lg md:text-lg ">
           {title}
         </h5>
         <div className="flex h-6 w-6 items-center justify-center rounded-full">
