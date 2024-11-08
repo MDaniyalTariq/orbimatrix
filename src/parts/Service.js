@@ -37,7 +37,7 @@ export default function Service({ data }) {
                 <div className="absolute inset-0 flex items-center justify-center p-6 text-white transition-opacity duration-300 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100">
                   <p className="text-lg text-center">{item.description}</p>
                 </div>
-                <h2 className="text-xl text-center py-7 rounded-b-2xl bg-gradient-heading ">
+                <h2 className="text-xl text-center py-7 rounded-b-2xl bg-gradient-heading-purple ">
                   {item.title}
                 </h2>
               </div>

@@ -67,9 +67,12 @@ module.exports = {
       },
       textColor: {
         "gradient-heading": "transparent",
+        "gradient-heading-purple": "transparent", // New text color for purple gradient
       },
       backgroundImage: {
-        "gradient-heading": "linear-gradient(to right, #1D4ED8, #3B82F6)",
+        "gradient-heading": "linear-gradient(to right, #1D4ED8, #3B82F6)", // Existing blue gradient
+        "gradient-heading-purple":
+          "linear-gradient(to right, #AB47BC, #6A1B9A)", // New purplish gradient
       },
       backgroundClip: {
         text: "text",
