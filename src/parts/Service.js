@@ -18,7 +18,7 @@ export default function Service({ data }) {
           </p>
         </Fade>
 
-        <div className="grid grid-rows-3 gap-8 px-10 sm:grid-cols-3 sm:grid-rows-1 sm:gap-6 xl:gap-16 place-items-center">
+        <div className="z-50 grid grid-rows-3 gap-8 px-10 sm:grid-cols-3 sm:grid-rows-1 sm:gap-6 xl:gap-16 place-items-center">
           {data.map((item, index) => (
             // eslint-disable-next-line react/no-array-index-key
             <Fade
@@ -27,14 +27,14 @@ export default function Service({ data }) {
               key={index}
               triggerOnce
             >
-              <div className="relative max-w-sm overflow-hidden transition duration-500 transform border shadow-2xl group rounded-2xl border-light-theme-purple lg:hover:scale-105">
+              <div className="relative  max-w-sm overflow-hidden transition duration-500 transform border shadow-2xl group rounded-2xl border-light-theme-purple lg:hover:scale-105">
                 <img
                   src={item.imageUrl}
                   alt="Service"
                   className="w-full rounded-t-2xl"
                 />
 
-                <div className="absolute inset-0 flex items-center justify-center p-6 text-white transition-opacity duration-300 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100">
+                <div className="absolute z-50 inset-0 flex items-center justify-center p-6 text-white transition-opacity duration-300 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100">
                   <p className="text-[15px] md:text-md text-center">
                     {item.description}
                   </p>

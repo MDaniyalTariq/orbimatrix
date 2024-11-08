@@ -56,9 +56,9 @@ const Header = () => {
         </div>
       </div>
 
-      <ul className="flex-row items-center hidden mt-0 tracking-widest text-theme-blue dark:text-secondry-white lg:flex">
+      <ul className=" flex-row items-center hidden mt-0 tracking-widest text-theme-blue dark:text-secondry-white lg:flex">
         {["/", "/team", "/about", "/contact", "/project"].map((link) => (
-          <li key={link} className="py-2 lg:py-0">
+          <li key={link} className="py-2 lg:py-0 z-50">
             <Button
               className={`${
                 path === link
@@ -74,7 +74,7 @@ const Header = () => {
           </li>
         ))}
 
-        <li>
+        <li className="z-50">
           <DiscussButton />
         </li>
 
@@ -95,7 +95,7 @@ const Header = () => {
         leaveTo="opacity-0"
       >
         <div className="transition duration-300 ease-in data-[closed]:opacity-0">
-          <ul className="absolute z-50 flex flex-col w-full my-6 tracking-widest bg-white border-b-2 dark:border-gray-800 dark:bg-dark-bg text-theme-blue lg:hidden">
+          <ul className="absolute z-40 flex flex-col w-full my-6 tracking-widest bg-white border-b-2 dark:border-gray-800 dark:bg-dark-bg text-theme-blue lg:hidden">
             {["/", "/team", "/about", "/contact", "/project"].map((link) => (
               <li className="py-2 bg-white dark:bg-dark-bg" key={link}>
                 <Button
