@@ -1,36 +1,46 @@
+import React from "react";
 
-
-import React from 'react';
-
-import { Fade } from 'react-awesome-reveal';
+import { Fade } from "react-awesome-reveal";
 
 export default function Service({ data }) {
   return (
     <div className="">
-      <div className="container mx-auto pt-20 pb-28">
+      <div className="container pt-20 mx-auto pb-28">
         <Fade direction="right" triggerOnce>
-          <h1 className="text-5xl text-theme-blue text-center font-bold">Our Service</h1>
+          <h1 className="text-5xl font-bold text-center text-light-theme-blue">
+            Our Services
+          </h1>
         </Fade>
         <Fade direction="left" triggerOnce>
-          <p className="font-light text-lg text-gray-400 text-center mb-12">
-            We are ready to scale up your business with our great service.
+          <p className="mb-12 text-lg font-light text-center dark:text-gray-400">
+            We’re prepared to accelerate your business growth with our top-notch
+            services.
           </p>
         </Fade>
 
-        <div className="grid grid-rows-3 px-10 gap-8 sm:grid-cols-3 sm:grid-rows-1 sm:gap-6 xl:gap-16">
-          {
-            data.map((item, index) => (
-              // eslint-disable-next-line react/no-array-index-key
-              <Fade direction={item.animation} delay={500 * index} key={index} triggerOnce>
-                <div>
-                  <div className="bg-white group rounded-2xl shadow-2xl border border-light-theme-purple transform transition duration-500 hover:scale-105">
-                    <img src={item.imageUrl} alt="Service" className="w-full rounded-t-2xl" />
-                    <h2 className="text-theme-blue text-center text-xl py-7 rounded-b-2xl">{item.title}</h2>
-                  </div>
+        <div className="grid grid-rows-3 gap-8 px-10 sm:grid-cols-3 sm:grid-rows-1 sm:gap-6 xl:gap-16">
+          {data.map((item, index) => (
+            // eslint-disable-next-line react/no-array-index-key
+            <Fade
+              direction={item.animation}
+              delay={500 * index}
+              key={index}
+              triggerOnce
+            >
+              <div>
+                <div className="transition duration-500 transform bg-white border shadow-2xl group rounded-2xl border-light-theme-purple hover:scale-105">
+                  <img
+                    src={item.imageUrl}
+                    alt="Service"
+                    className="w-full rounded-t-2xl"
+                  />
+                  <h2 className="text-xl text-center text-theme-blue py-7 rounded-b-2xl">
+                    {item.title}
+                  </h2>
                 </div>
-              </Fade>
-            ))
-          }
+              </div>
+            </Fade>
+          ))}
         </div>
       </div>
     </div>

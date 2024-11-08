@@ -31,8 +31,8 @@ export default function Hero() {
         </h1>
 
         <p className="mb-16 text-xl font-light leading-relaxed dark:text-gray-400">
-          We provide developers & designers using latest technologies to help
-          you scale up your business.
+          We offer expert Web3, smart contract, AI, mobile, and development
+          services using the latest technologies to help scale your business.
         </p>
         <Fade direction="up" delay={500} triggerOnce>
           <Button
