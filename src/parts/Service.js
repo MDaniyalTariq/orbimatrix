@@ -18,7 +18,7 @@ export default function Service({ data }) {
           </p>
         </Fade>
 
-        <div className="grid grid-rows-3 gap-8 px-10 sm:grid-cols-3 sm:grid-rows-1 sm:gap-6 xl:gap-16">
+        <div className="grid grid-rows-3 gap-8 px-10 sm:grid-cols-3 sm:grid-rows-1 sm:gap-6 xl:gap-16 place-items-center">
           {data.map((item, index) => (
             // eslint-disable-next-line react/no-array-index-key
             <Fade
@@ -27,13 +27,17 @@ export default function Service({ data }) {
               key={index}
               triggerOnce
             >
-              <div className="transition duration-500 transform bg-[#272B36] border border-gray-600 shadow-xl group rounded-xl hover:scale-105 hover:shadow-2xl hover:rotate-1 max-w-xs m-auto">
+              <div className="relative max-w-sm overflow-hidden transition duration-500 transform border shadow-2xl group rounded-2xl border-light-theme-purple lg:hover:scale-105">
                 <img
                   src={item.imageUrl}
                   alt="Service"
-                  // className="object-cover w-full h-48 rounded-t-xl"
+                  className="w-full rounded-t-2xl"
                 />
-                <h2 className="px-3 py-5 text-lg text-center text-white transition-colors duration-300 rounded-b-xl group-hover:text-theme-blue">
+
+                <div className="absolute inset-0 flex items-center justify-center p-6 text-white transition-opacity duration-300 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100">
+                  <p className="text-lg text-center">{item.description}</p>
+                </div>
+                <h2 className="text-xl text-center text-theme-blue py-7 rounded-b-2xl">
                   {item.title}
                 </h2>
               </div>

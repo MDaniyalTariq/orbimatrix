@@ -41,31 +41,43 @@ export const Services = [
     title: "Web Development",
     imageUrl: Web,
     animation: "left",
+    description:
+      "Craft dynamic, responsive websites tailored to your business needs, ensuring an engaging user experience and robust functionality across all platforms.",
   },
   {
     title: "Smart Contracts",
     imageUrl: Web,
     animation: "up",
+    description:
+      "Build secure and efficient smart contracts that automate transactions, streamline processes, and enhance trust in blockchain environments.",
   },
   {
     title: "Smart Contract Auditing",
     imageUrl: Web,
     animation: "right",
+    description:
+      "Ensure the safety and reliability of your blockchain projects with thorough smart contract audits, identifying potential vulnerabilities and optimizing performance.",
   },
   {
     title: "Web3 Games",
     imageUrl: Mobile,
     animation: "left",
+    description:
+      "Develop immersive Web3 games that integrate blockchain technology, offering unique in-game assets, decentralized economies, and player-owned experiences.",
   },
   {
     title: "Chatbots Making",
     imageUrl: UIUX,
     animation: "up",
+    description:
+      "Create intelligent chatbots designed to enhance customer interactions, automate responses, and provide real-time support across various platforms.",
   },
   {
     title: "AI Custom Solutions",
     imageUrl: UIUX,
     animation: "right",
+    description:
+      "Leverage cutting-edge AI technology to build tailored solutions that address specific business challenges, improve decision-making, and optimize workflows.",
   },
 ];
 

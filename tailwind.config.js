@@ -34,7 +34,6 @@ module.exports = {
         "theme-blue": "#152C5B",
         "light-theme-blue": "#2B4690",
         "dark-bg": "#191C27",
-        "bg-card": "#272B36",
         "primary-white": "#d4dae6",
         "secondry-white": "#e1e7f0",
       },
