@@ -192,51 +192,65 @@ export const TeamMembers = [
     name: "Saqib Iqbal",
     position: "Founder",
     imageUrl: CEO,
-    description: "",
-    instagram: "",
-    x: "",
-    github: "",
-    portfolio: "",
-  },
-  {
-    name: "Daniyal Tariq",
-    position: "CTO",
-    imageUrl: Daniyal,
-    description: "",
-    instagram: "",
-    x: "",
-    github: "",
-    portfolio: "",
+    description: "Founder and visionary, leading the company towards success.",
+    socialLinks: {
+      instagram: "https://instagram.com/saqib",
+      x: "https://x.com/saqib",
+      github: "https://github.com/saqib",
+      linkedin: "https://linkedin.com/in/saqib",
+    },
   },
   {
     name: "Momin Minhas",
     position: "Co-Founder",
     imageUrl: Momin,
-    description: "",
-    instagram: "",
-    x: "",
-    github: "",
-    portfolio: "",
+    description:
+      "Co-Founder, helping shape the vision and growth of the company.",
+    socialLinks: {
+      instagram: "https://instagram.com/momin",
+      x: "https://x.com/momin",
+      github: "https://github.com/momin",
+      linkedin: "https://linkedin.com/in/momin",
+    },
   },
+  {
+    name: "Daniyal Tariq",
+    position: "CTO",
+    imageUrl: Daniyal,
+    description:
+      "Chief Technology Officer, overseeing the tech strategy and development.",
+    socialLinks: {
+      instagram: "https://instagram.com/daniyal",
+      x: "https://x.com/daniyal",
+      github: "https://github.com/daniyal",
+      linkedin: "https://linkedin.com/in/daniyal",
+    },
+  },
+
   {
     name: "Mahnoor Farooq",
     position: "Frontend Engineer",
     imageUrl: Mahnoor,
-    description: "",
-    instagram: "",
-    x: "",
-    github: "",
-    portfolio: "",
+    description:
+      "Frontend Engineer, focusing on creating seamless user experiences.",
+    socialLinks: {
+      instagram: "https://instagram.com/mahnnoor",
+      x: "https://x.com/mahnnoor",
+      github: "https://github.com/mahnnoor",
+      linkedin: "https://linkedin.com/in/mahnnoor", // updated to linkedin
+    },
   },
   {
     name: "Maram Guidah",
     position: "Social Media Marketer",
     imageUrl: Mahnoor,
-    description: "",
-    instagram: "",
-    x: "",
-    github: "",
-    portfolio: "",
+    description:
+      "Social Media Marketer, crafting strategies for growing brand presence.",
+    socialLinks: {
+      instagram: "https://instagram.com/maram",
+      x: "https://x.com/maram",
+      github: "https://github.com/maram",
+      linkedin: "https://linkedin.com/in/maram", // updated to linkedin
+    },
   },
 ];
-

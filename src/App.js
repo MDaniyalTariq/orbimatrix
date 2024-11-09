@@ -12,6 +12,7 @@ import { DiscussProjectPage } from "pages/DiscussProjectPage";
 import { AboutPage } from "pages/AboutPage";
 import "./assets/css/styles.css";
 import React from "react";
+import ContactPage from "pages/ContactPage";
 
 function App() {
   const targetDate = "2024-12-31T23:59:59";
@@ -23,7 +24,7 @@ function App() {
         <Route exact path="/project/:id" element={<ProjectDetailPage />} />
         <Route exact path="/team" element={<TeamPage />} />
         <Route exact path="/about" element={<AboutPage />} />
-        <Route exact path="/contact" element={<TeamPage />} />
+        <Route exact path="/contact" element={<ContactPage />} />
         <Route exact path="/discuss-project" element={<DiscussProjectPage />} />
         <Route path="**" element={<NotFoundPage />} />
       </Routes>
