@@ -6,7 +6,7 @@ import Button from "../elements/Button";
 
 export default function Portfolio({ data }) {
   return (
-    <section className="container flex flex-col items-center mx-auto mt-20">
+    <section className="container mx-auto flex flex-col items-center mt-20">
       <Fade direction="right" triggerOnce>
         <h1 className="text-5xl font-bold text-center text-transparent bg-gradient-heading bg-clip-text">
           Our Selected Project
@@ -30,15 +30,14 @@ export default function Portfolio({ data }) {
             key={index}
           >
             <Button type="link" href={`/project/${item.id}`}>
-              <div className="w-auto m-3 transition duration-500 transform shadow-xl group rounded-2xl hover:scale-110 portofolio-card">
+              <div className="group rounded-2xl shadow-xl w-auto m-3 transform transition duration-500 hover:scale-110 portofolio-card">
                 <div className="relative">
                   <img
                     src={item.imageUrl}
                     alt="Portfolio"
-                    className=""
+                    className="rounded-t-2xl z-0"
                   />
-                  <div className="absolute top-0 flex justify-center w-full h-full bg-black rounded-b opacity-0 rounded-t-2xl ">  
-                     //img-hover
+                  <div className="absolute flex w-full h-full top-0 opacity-0 bg-black justify-center rounded-t-2xl rounded-b img-hover">
                     <button className="focus:outline-none">
                       <svg
                         className="w-20 h-20 text-gray-200"
@@ -85,9 +84,9 @@ export default function Portfolio({ data }) {
         <Button
           href="/project"
           type="link"
-          className="flex items-center justify-center flex-grow-0 h-12 px-5 transition duration-300 border rounded-full w-36 sm:w-40 sm:h-14 lg:w-44 lg:h-16 xl:w-36 xl:h-12 text-theme-purple border-theme-purple mt-14 hover:bg-theme-purple hover:text-white"
+          className="flex flex-grow-0 w-36 h-12 sm:w-40 sm:h-14 lg:w-44 lg:h-16 xl:w-36 xl:h-12 text-theme-purple px-5 border border-theme-purple items-center mt-14 rounded-full justify-center transition duration-300 hover:bg-theme-purple hover:text-white"
         >
-          <p className="py-3 font-normal lg:text-lg xl:text-base">See More</p>
+          <p className="font-normal py-3 lg:text-lg xl:text-base">See More</p>
           <svg
             className="w-4 h-4"
             xmlns="http://www.w3.org/2000/svg"

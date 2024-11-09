@@ -7,12 +7,10 @@ import smart from "../assets/images/Services/smart.png";
 import chatbot from "../assets/images/Services/chatbot.png";
 
 // Portfolio Img Imports
-import Recruiting from "../assets/images/Portfolio/Recruiting.png";
-import Stream from "../assets/images/Portfolio/Stream.png";
-import Freelance from "../assets/images/Portfolio/Freelance.png";
-import Aura from "../assets/images/Portfolio/Aura.png";
-import Surtido from "../assets/images/Portfolio/Surtido.png";
-import ManagementApp from "../assets/images/Portfolio/ManagementApp.png";
+
+import Web3 from "../assets/images/Portfolio/2.png";
+import Wellet from "../assets/images/Portfolio/6.png";
+import Farmer from "../assets/images/Portfolio/9.png";
 
 // Advantages
 import Communicative from "../assets/images/Advantages/Communicative.png";
@@ -91,52 +89,37 @@ export const Services = [
 export const Portfolios = [
   {
     id: "asd1293uasdads1",
-    title: "Recruiting App",
-    imageUrl: Recruiting,
-    type: "Mobile Apps",
-    responsibility: ["Mobile Development", "UI/UX Design"],
-    credit: "https://dribbble.com/shots/15164950-Recruiting-app",
+    title: "Orbix-Trivia",
+    imageUrl: Web3,
+    type: "Web3 Game",
+    responsibility: ["Website Development", "AI Custom Solutions"],
+    credit: "https://www.web3trivia.com/",
+    description:
+      "OrbiX-Trivia, the ultimate solo trivia game powered byWeb3, where every correct answer brings you closer to earning valuable tokens. Choose from multiple categories and tackle a 10 question challenge with just 20 seconds per question. With a starting set of 105 lives, test your skills and see how far you can go! Need more chances? Purchase 105 extra lives for only $5, or unlock unlimited lives with our exclusive $10 subscription. Join the fun, sharpen your mind, and start earning with OrbiX Trivia today— because in this game, knowledge truly pays.",
   },
   {
     id: "asd1293uhjkhkjh2",
-    title: "Stream+",
-    imageUrl: Stream,
-    type: "Mobile Apps",
-    responsibility: ["Mobile Development", "UI/UX Design"],
-    credit: "https://dribbble.com/shots/15276430-Stream",
+    title: "Wishing Wellet",
+    imageUrl: Wellet,
+    type: "Web3 Wishing Web-App",
+    responsibility: [
+      "Website Development",
+      "AI Custom Solutions",
+      "Smart Contracts",
+    ],
+    credit: "https://farmer-tycon.mystrikingly.com",
+    description:
+      "Experience WishingWellet, the digital wishing well on the Solana blockchain. Toss a coin and make your wish! Every three days, three lucky participants will share in the collected Solana tokens. Join us and make your dreams come true! A decentralised wishing wallet built on the Solana blockchain, allowing users to send wishes and sol tokens. Users can send wishes by transferring SOL tokens to the wishing wallet address. After 3 days, 3 random users who send wishes with tokens will receive tokens transferred to their wallet. Users must send SOL tokens to the wallet within the 3-day timeframe to be eligible for token distribution.",
   },
   {
     id: "asd1293uvbvcbbd3",
-    title: "Freelance",
-    imageUrl: Freelance,
-    type: "Mobile Apps",
-    responsibility: ["Mobile Development", "UI/UX Design"],
-    credit: "https://dribbble.com/shots/15223131-Freelance-Mobile-App-Concept",
-  },
-  {
-    id: "asd1293ufgdfgs4",
-    title: "Aura",
-    imageUrl: Aura,
-    type: "Website",
-    responsibility: ["Web Development", "UI/UX Design"],
-    credit: "https://dribbble.com/shots/15176338-Aura-Website-Main-Page",
-  },
-  {
-    id: "asd1293ulskmnb5",
-    title: "Surtido Rico",
-    imageUrl: Surtido,
-    type: "Website",
-    responsibility: ["Web Development", "UI/UX Design"],
-    credit: "https://dribbble.com/shots/15173118-Surtido-Rico",
-  },
-  {
-    id: "asd1293ulkmnbj6",
-    title: "Courses Management",
-    imageUrl: ManagementApp,
-    type: "Website",
-    responsibility: ["Web Development", "UI/UX Design"],
-    credit:
-      "https://dribbble.com/shots/15197890-Courses-Management-and-Promoting-Web-App",
+    title: "Farmer Tycon",
+    imageUrl: Farmer,
+    type: "Web3 Staking",
+    responsibility: ["Website Development", "Smart Contracts"],
+    credit: "https://farmer-tycon.mystrikingly.com",
+    description:
+      "Farmer Tycoon is a NFT-staking game where you can equip farmer NFTs with tools, machinery, and seeds provided by the game. Your NFT farmers work tirelessly. After staking your NFTs for a set period, you'll receive carrot tokens as rewards. The longer you stake, the bigger your harvest! Use your carrot tokens to buy better tools, expand your farm, and unlock new NFT characters with unique abilities. The more you grow, the more you earn!",
   },
 ];
 
@@ -173,10 +156,10 @@ export const Advantages = [
 export const Testimonials = [
   {
     id: 1,
-    name: "Jake harmer",
+    name: "Jake Harmer",
     company: "CEO, familyhistorystorybooks",
     testimoni:
-      "Excellent to work with the creator. He knows what he's doing and was able to match what I needed.",
+      "Orbimatrix was excellent to work with. They know what they're doing and were able to match exactly what I needed.",
     imageUrl: Sasha,
   },
   {
@@ -184,14 +167,14 @@ export const Testimonials = [
     name: "Aman Kumar",
     company: "Developer",
     testimoni:
-      "I loved the quick turnaround time and delivered exactly what I needed. will definitely work again.",
+      "I loved the quick turnaround time from Orbimatrix. They delivered exactly what I needed and exceeded my expectations.",
     imageUrl: Jake,
   },
   {
     id: 3,
     name: "Thomas",
     company: "Smart Contract Developer",
-    testimoni: "Found a solution quickly.",
+    testimoni: "Orbimatrix found a solution quickly and efficiently.",
     imageUrl: Reiner,
   },
   {
@@ -199,7 +182,7 @@ export const Testimonials = [
     name: "Muhammad Suleman",
     company: "Video Editor",
     testimoni:
-      "Professional, reliable, and always on point—this team delivers every time.",
+      "Professional, reliable, and always on point—Orbimatrix delivers every time.",
     imageUrl: Suleman,
   },
   {
@@ -207,7 +190,7 @@ export const Testimonials = [
     name: "Vincent Companaro",
     company: "Founder and President, CHURN",
     testimoni:
-      "Saqib is an exceptional engineer with a proactive approach, consistently exceeding expectations and taking initiative to tackle challenges effectively.",
+      "Orbimatrix's team is exceptional, with a proactive approach, consistently exceeding expectations and tackling challenges effectively.",
     imageUrl: Vincent,
   },
 ];
