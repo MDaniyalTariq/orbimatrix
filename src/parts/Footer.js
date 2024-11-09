@@ -4,6 +4,13 @@ import BrandIcon from "./BrandIcon";
 import Button from "../elements/Button";
 
 export default function Footer() {
+  const menuItems = [
+    { name: "Home", link: "/" },
+    { name: "Team", link: "/team" },
+    { name: "About", link: "/about" },
+    { name: "Contact", link: "/discuss-project" },
+    { name: "Projects", link: "/project" },
+  ];
   return (
     <footer className="w-full">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -20,41 +27,30 @@ export default function Footer() {
               business.
             </p>
             <a
-              href="javascript:;"
+              href="/discuss-project"
               className="py-2.5 px-5 h-9 block w-fit bg-indigo-600 rounded-full shadow-sm text-xs text-white mx-auto transition-all  duration-500 hover:bg-indigo-700 lg:mx-0"
             >
               Contact us
             </a>
           </div>
           <div className="lg:mx-auto text-left ">
-            <h4 className="text-lg text-gray-900 dark:text-primary-white  font-medium mb-7">
+            <h4 className="text-lg text-transparent bg-gradient-heading bg-clip-text font-medium mb-7">
               Orbimatrix
             </h4>
-            <ul className="text-sm  transition-all duration-500">
-              <li className="mb-6">
-                <a
-                  href="javascript:;"
-                  className="text-gray-600 hover:text-gray-900"
+            <ul className="text-sm transition-all duration-500">
+              {menuItems.map((item, index) => (
+                <li
+                  key={index}
+                  className={index !== menuItems.length - 1 ? "mb-6" : ""}
                 >
-                  Home
-                </a>
-              </li>
-              <li className="mb-6">
-                <a
-                  href="javascript:;"
-                  className=" text-gray-600 hover:text-gray-900"
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="javascript:;"
-                  className=" text-gray-600 hover:text-gray-900"
-                >
-                  Pricing
-                </a>
-              </li>
+                  <a
+                    href={item.link}
+                    className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="lg:mx-auto text-left ">
