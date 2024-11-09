@@ -26,18 +26,10 @@ import Jake from "../assets/images/Testimonials/Jake.png";
 import Suleman from "../assets/images/Testimonials/Suleman.png";
 
 // TeamMembers
-import CEO from "../assets/images/TeamMembers/CEO.jpg";
-import HRD from "../assets/images/TeamMembers/HRD.jpg";
-import Finance from "../assets/images/TeamMembers/Finance.jpg";
-import ProjectManager from "../assets/images/TeamMembers/Project-manager.jpg";
-import Frontend1 from "../assets/images/TeamMembers/Frontend1.jpg";
-import Frontend2 from "../assets/images/TeamMembers/Frontend2.jpg";
-import Backend1 from "../assets/images/TeamMembers/Backend1.jpg";
-import Backend2 from "../assets/images/TeamMembers/Backend2.jpg";
-import Mobile1 from "../assets/images/TeamMembers/Mobile1.jpg";
-import Mobile2 from "../assets/images/TeamMembers/Mobile2.jpg";
-import UIUX1 from "../assets/images/TeamMembers/UIUX1.jpg";
-import UIUX2 from "../assets/images/TeamMembers/UIUX2.jpg";
+import CEO from "../assets/images/TeamMembers/saqib.png";
+import Daniyal from "../assets/images/TeamMembers/daniyal.png";
+import Mahnoor from "../assets/images/TeamMembers/mahnoor.png";
+import Momin from "../assets/images/TeamMembers/momin.png";
 
 export const Services = [
   {
@@ -197,63 +189,28 @@ export const Testimonials = [
 
 export const TeamMembers = [
   {
-    name: "Rach David",
-    position: "CEO",
+    name: "Saqib Iqbal",
+    position: "Founder",
     imageUrl: CEO,
   },
   {
-    name: "Pauline Sydney",
-    position: "HRD",
-    imageUrl: HRD,
+    name: "Daniyal Tariq",
+    position: "CTO",
+    imageUrl: Daniyal,
   },
   {
-    name: "Granger Watterson",
-    position: "Finance",
-    imageUrl: Finance,
+    name: "Momin Minhas",
+    position: "Co-Founder",
+    imageUrl: Momin,
   },
   {
-    name: "Tom Jimmy",
-    position: "Project Manager",
-    imageUrl: ProjectManager,
+    name: "Mahnoor Farooq",
+    position: "Frontend Engineer",
+    imageUrl: Mahnoor,
   },
   {
-    name: "Jim Hendrix",
-    position: "Front-end Developer",
-    imageUrl: Frontend1,
-  },
-  {
-    name: "Calvin Max",
-    position: "Front-end Developer",
-    imageUrl: Frontend2,
-  },
-  {
-    name: "Hawkins Jim",
-    position: "Back-end Developer",
-    imageUrl: Backend1,
-  },
-  {
-    name: "Don Bizaro",
-    position: "Back-end Developer",
-    imageUrl: Backend2,
-  },
-  {
-    name: "Bill Markinson",
-    position: "Mobile Developer",
-    imageUrl: Mobile1,
-  },
-  {
-    name: "Igor Kavarov",
-    position: "Mobile Developer",
-    imageUrl: Mobile2,
-  },
-  {
-    name: "Freddie Curl",
-    position: "UI/UX Designer",
-    imageUrl: UIUX2,
-  },
-  {
-    name: "Monica Lovegood",
-    position: "UI/UX Designer",
-    imageUrl: UIUX1,
+    name: "Maram Guidah",
+    position: "Social Media Marketer",
+    imageUrl: Mahnoor,
   },
 ];
