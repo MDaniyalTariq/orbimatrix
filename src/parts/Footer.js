@@ -27,7 +27,7 @@ export default function Footer() {
             </a>
           </div>
           <div className="lg:mx-auto text-left ">
-            <h4 className="text-lg text-gray-900 font-medium mb-7">
+            <h4 className="text-lg text-gray-900 dark:text-primary-white  font-medium mb-7">
               Orbimatrix
             </h4>
             <ul className="text-sm  transition-all duration-500">
@@ -58,7 +58,9 @@ export default function Footer() {
             </ul>
           </div>
           <div className="lg:mx-auto text-left ">
-            <h4 className="text-lg text-gray-900 font-medium mb-7">Products</h4>
+            <h4 className="text-lg text-gray-900 font-medium mb-7 dark:text-primary-white">
+              Products
+            </h4>
             <ul className="text-sm  transition-all duration-500">
               <li className="mb-6">
                 <a
@@ -87,7 +89,9 @@ export default function Footer() {
             </ul>
           </div>
           <div className="lg:mx-auto text-left ">
-            <h4 className="text-lg text-gray-900 font-medium mb-7">Support</h4>
+            <h4 className="text-lg text-gray-900 font-medium mb-7 dark:text-primary-white">
+              Support
+            </h4>
             <ul className="text-sm  transition-all duration-500">
               <li className="mb-6">
                 <a
@@ -116,7 +120,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="lg:mx-auto text-left ">
-            <h4 className="text-lg text-gray-900 font-medium mb-7">
+            <h4 className="text-lg text-gray-900 font-medium mb-7 dark:text-primary-white">
               Subscribe
             </h4>
             <p className="text-sm text-gray-500 leading-6 mb-7">
