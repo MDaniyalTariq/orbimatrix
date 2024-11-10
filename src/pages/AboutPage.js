@@ -6,7 +6,8 @@ import React, { useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
 import { Swiper } from "swiper";
 import "swiper/css/bundle";
-
+import Saqib from "../assets/images/TeamMembers/saqib.png";
+import Daniyal from "../assets/images/TeamMembers/daniyal.png";
 import HorizontalScrollBar from "components/HorizontalScrollBar";
 export const AboutPage = () => {
   useEffect(() => {
@@ -82,7 +83,7 @@ export const AboutPage = () => {
     {
       name: "Saqib Iqbal",
       role: "Founder",
-      image: "saqib.png",
+      image: Saqib,
       description:
         "I am the Co-founder & CTO of Orbimatrix and we’ve pushed our limit so far to make it successful.",
       links: {
@@ -93,7 +94,7 @@ export const AboutPage = () => {
     {
       name: "Daniyal Tariq",
       role: "Full Stack Engineer",
-      image: "daniyal.png",
+      image: Daniyal,
       description:
         "I’ve been Full Stack Engineer for Orbimatrix since the beginning of it and enjoyed every bit.",
       links: {
@@ -144,11 +145,13 @@ export const AboutPage = () => {
           <section className="relative z-0 py-14 lg:py-12 ">
             <div className="relative px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
               <h1 className="max-w-2xl mx-auto mb-5 text-4xl font-bold text-center text-gray-800 font-manrope dark:text-gray-300 md:text-5xl md:leading-normal">
-                Get to know the Team behind{" "}
-                <span className="text-indigo-600">Orbimatrix </span>
+                Get to know the Team behind
+                <span className="text-transparent bg-gradient-heading bg-clip-text">
+                  Orbimatrix
+                </span>
               </h1>
               <p className="max-w-sm mx-auto text-base font-normal leading-7 text-center dark:text-gray-300 mb-9">
-                Play, Learn & Earn!
+                Services You Trust, Products You Can Entrust
               </p>
             </div>
           </section>
@@ -169,15 +172,19 @@ export const AboutPage = () => {
               <div className="lg:pl-[100px] flex items-center">
                 <div className="w-full data">
                   <Fade direction="right" triggerOnce>
-                    <h2 className="relative text-4xl font-bold font-manrope lg:text-5xl dark:text-white mb-9 max-lg:text-center">
-                      About Us{" "}
+                    <h2 className="relative text-4xl font-bold text-transparent font-manrope lg:text-5xl bg-gradient-heading bg-clip-text mb-9 max-lg:text-center">
+                      About Us
                     </h2>
                   </Fade>
                   <Fade direction="left" triggerOnce>
-                    <p className="max-w-2xl mx-auto text-xl font-normal leading-8 dark:text-gray-400 max-lg:text-center">
-                      Orbimatrix leads digital innovation by merging Web3 gaming
-                      and AI. Creating State of the Art fully on-chain and
-                      off-chain games.
+                    <p className="max-w-2xl mx-auto text-xl font-normal leading-8 text-justify dark:text-gray-400 max-lg:text-center">
+                      Orbimatrix is a leader in digital innovation, merging Web3
+                      technology, AI, and gaming to create cutting-edge, fully
+                      on-chain and off-chain games. By integrating advanced AI
+                      systems, they offer immersive, dynamic gaming experiences
+                      that adapt in real-time. Their solutions push the
+                      boundaries of decentralized gaming, setting new standards
+                      for the future of digital entertainment.
                     </p>
                   </Fade>
                 </div>
@@ -198,12 +205,12 @@ export const AboutPage = () => {
                     />
                   </Fade>
                   <Fade direction="left" triggerOnce>
-                    <h2 className="text-4xl font-bold font-manrope lg:text-5xl dark:text-white mb-9 max-lg:text-center">
+                    <h2 className="text-4xl font-bold text-transparent font-manrope lg:text-5xl bg-gradient-heading bg-clip-text mb-9 max-lg:text-center">
                       Earn Crypto Rewards!
                     </h2>
                   </Fade>
                   <Fade direction="right" triggerOnce>
-                    <p className="max-w-2xl mx-auto text-xl font-normal leading-8 dark:text-gray-400 max-lg:text-center">
+                    <p className="max-w-2xl mx-auto text-xl font-normal leading-8 text-justify dark:text-gray-400 max-lg:text-center">
                       Challenge your sports knowledge and earn crypto rewards in
                       our thrilling trivia game. Play, learn, and get rewarded
                       for every correct answer. Join the game where knowledge
@@ -227,11 +234,11 @@ export const AboutPage = () => {
         <Fade direction="up" delay={500} triggerOnce>
           <section className="py-20 ">
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-              <h2 className="text-4xl font-bold text-center font-manrope dark:text-gray-300 mb-14">
+              <h2 className="text-4xl font-bold text-center text-transparent font-manrope bg-gradient-heading bg-clip-text mb-14">
                 Our results in numbers
               </h2>
               <div className="flex flex-col gap-5 xl:gap-8 lg:flex-row lg:justify-between">
-                <div className="w-full p-6 mx-auto bg-white shadow-md max-lg:max-w-2xl lg:mx-0 lg:w-1/3 rounded-2xl shadow-gray-100">
+                <div className="w-full p-6 mx-auto bg-white shadow-md max-lg:max-w-2xl lg:mx-0 lg:w-1/3 rounded-2xl ">
                   <div className="flex gap-5">
                     <div className="text-2xl font-bold text-indigo-600 font-manrope">
                       240%
@@ -247,7 +254,7 @@ export const AboutPage = () => {
                     </div>
                   </div>
                 </div>
-                <div className="w-full p-6 mx-auto bg-white shadow-md max-lg:max-w-2xl lg:mx-0 lg:w-1/3 rounded-2xl shadow-gray-100">
+                <div className="w-full p-6 mx-auto bg-white shadow-md max-lg:max-w-2xl lg:mx-0 lg:w-1/3 rounded-2xl ">
                   <div className="flex gap-5">
                     <div className="text-2xl font-bold text-indigo-600 font-manrope">
                       175+
@@ -263,7 +270,7 @@ export const AboutPage = () => {
                     </div>
                   </div>
                 </div>
-                <div className="w-full p-6 mx-auto bg-white shadow-md max-lg:max-w-2xl lg:mx-0 lg:w-1/3 rounded-2xl shadow-gray-100">
+                <div className="w-full p-6 mx-auto bg-white shadow-md max-lg:max-w-2xl lg:mx-0 lg:w-1/3 rounded-2xl ">
                   <div className="flex gap-5">
                     <div className="text-2xl font-bold text-indigo-600 font-manrope">
                       100%
@@ -287,7 +294,7 @@ export const AboutPage = () => {
           <section className="py-14 lg:py-24">
             <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
               <div className="mb-16 rounded-full">
-                <h2 className="text-4xl font-bold text-center font-manrope dark:text-gray-300">
+                <h2 className="text-4xl font-bold text-center text-transparent font-manrope bg-gradient-heading bg-clip-text">
                   What our happy users say!
                 </h2>
               </div>
@@ -302,7 +309,7 @@ export const AboutPage = () => {
                             Playing this sports trivia game is a blast! Not only
                             do I get to test my knowledge and learn new facts,
                             but I also earn crypto rewards for every correct
-                            answer. It’s the perfect mix of fun and profit!
+                            answer. It's the perfect mix of fun and profit!
                           </p>
                         </div>
                       </div>
@@ -369,7 +376,7 @@ export const AboutPage = () => {
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <Fade bottom delay={200} triggerOnce>
               <div className="mb-24">
-                <h2 className="mb-6 text-4xl font-bold text-center font-manrope dark:text-gray-300">
+                <h2 className="mb-6 text-4xl font-bold text-center text-transparent font-manrope bg-gradient-heading bg-clip-text">
                   Meet our Team!
                 </h2>
                 <p className="text-lg text-center dark:text-gray-400">
@@ -408,7 +415,7 @@ export const AboutPage = () => {
                           </p>
                           <div className="flex items-center justify-center gap-4 lg:justify-start">
                             <ul className="flex gap-4">
-                              <li className="flex items-center justify-center w-12 h-12 text-gray-900 transition-all duration-500 bg-gray-100 rounded-full cursor-pointer hover:text-white group hover:bg-indigo-600">
+                              <li className="flex items-center justify-center w-12 h-12 text-white transition-all duration-500 bg-indigo-600 rounded-full cursor-pointer group dark:text-gray-900 dark:bg-gray-100 hover:bg-white hover:text-indigo-600 dark:hover:bg-indigo-600 dark:hover:text-white">
                                 <a
                                   href={member.links.x}
                                   target="_blank"
@@ -429,7 +436,7 @@ export const AboutPage = () => {
                                   </svg>
                                 </a>
                               </li>
-                              <li className="flex items-center justify-center w-12 h-12 text-gray-900 transition-all duration-500 bg-gray-100 rounded-full cursor-pointer hover:text-white group hover:bg-indigo-600">
+                              <li className="flex items-center justify-center w-12 h-12 text-white transition-all duration-500 bg-indigo-600 rounded-full cursor-pointer group dark:text-gray-900 dark:bg-gray-100 hover:bg-white hover:text-indigo-600 dark:hover:bg-indigo-600 dark:hover:text-white">
                                 <a
                                   href={member.links.linkedin}
                                   target="_blank"
