@@ -13,11 +13,14 @@ import { AboutPage } from "pages/AboutPage";
 import "./assets/css/styles.css";
 import React from "react";
 import ContactPage from "pages/ContactPage";
+import { LiveChatWidget } from "@livechat/widget-react";
 
 function App() {
   const targetDate = "2024-12-31T23:59:59";
   return (
     <>
+      <LiveChatWidget license="18854253" />
+
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
         <Route path="/project" element={<ProjectPage />} />
