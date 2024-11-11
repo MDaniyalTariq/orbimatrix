@@ -81,7 +81,7 @@ export default function AllPortfolio({ data }) {
                         </div>
                       </div>
                       <div className="py-4">
-                        <h2 className="text-theme-blue text-center text-xl">
+                        <h2 className="text-transparent bg-gradient-heading bg-clip-text text-center text-xl">
                           {item.title}
                         </h2>
                         <p className="font-light text-gray-400 text-center">

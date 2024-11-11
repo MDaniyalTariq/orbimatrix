@@ -66,7 +66,7 @@ const ContactPage = () => {
                         Our Address
                       </h3>
                       <p className="text-gray-500 dark:text-slate-400">
-                        Queens, NYC, USA
+                        New York City, USA
                       </p>
                     </div>
                   </li>
@@ -94,7 +94,7 @@ const ContactPage = () => {
                         Contact
                       </h3>
                       <p className="text-gray-500 dark:text-slate-400">
-                        orbimatrix@gmail.com
+                        contact@orbimatrix.com
                       </p>
                     </div>
                   </li>

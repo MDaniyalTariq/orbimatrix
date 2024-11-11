@@ -10,7 +10,8 @@ import Saqib from "../assets/images/TeamMembers/saqib.png";
 import Daniyal from "../assets/images/TeamMembers/daniyal.png";
 import Momin from "../assets/images/TeamMembers/momin.png";
 import Mahnoor from "../assets/images/TeamMembers/mahnoor.png";
-import Maram from "../assets/images/TeamMembers/mahnoor.png";
+import Maram from "../assets/images/TeamMembers/maram.png";
+
 import Services from "../assets/images/hero/service2.png";
 import HorizontalScrollBar from "components/HorizontalScrollBar";
 export const AboutPage = () => {
@@ -97,7 +98,7 @@ export const AboutPage = () => {
     },
     {
       name: "M Momin",
-      role: "Founder",
+      role: "Co-Founder",
       image: Momin,
       description:
         "As a Co-Founder, I’m dedicated to developing and refining Orbimatrix's tech foundations and supporting our long-term goals.",
@@ -125,8 +126,7 @@ export const AboutPage = () => {
         "As a Frontend Developer, I focus on creating engaging and intuitive user interfaces that enhance the Orbimatrix user experience.",
       links: {
         x: "https://x.com",
-        linkedin:
-          "https://www.linkedin.com/in/mahnoor-farooq-649690239?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        linkedin: "https://www.linkedin.com/in/mahnoor-farooq-649690239/",
       },
     },
     {
@@ -183,7 +183,7 @@ export const AboutPage = () => {
                     className="max-lg:mx-auto"
                   />
                 </Fade>
-                <h2 className="px-3 font-bold text-transparent mt-44text-3xl bg-gradient-heading bg-clip-text lg:text-5xl font-manrope dark:text-white">
+                <h2 className="px-3 font-bold text-gray-900 mt-44text-3xl  lg:text-5xl font-manrope dark:text-white">
                   ORBIMATRIX
                 </h2>
               </div>

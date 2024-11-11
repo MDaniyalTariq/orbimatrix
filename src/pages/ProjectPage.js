@@ -26,7 +26,6 @@ export default class ProjectPage extends Component {
           <Header />
         </section>
         <HorizontalScrollBar />
-
         <HeroPortfolio />
         <AllPortfolio data={Portfolios} />
         <Discuss />

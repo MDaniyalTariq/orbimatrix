@@ -30,6 +30,7 @@ import CEO from "../assets/images/TeamMembers/saqib.png";
 import Daniyal from "../assets/images/TeamMembers/daniyal.png";
 import Mahnoor from "../assets/images/TeamMembers/mahnoor.png";
 import Momin from "../assets/images/TeamMembers/momin.png";
+import Maram from "../assets/images/TeamMembers/maram.png";
 
 export const Services = [
   {
@@ -243,7 +244,7 @@ export const TeamMembers = [
   {
     name: "Maram Guidah",
     position: "Social Media Marketer",
-    imageUrl: Mahnoor,
+    imageUrl: Maram,
     description:
       "Social Media Marketer, crafting strategies for growing brand presence.",
     socialLinks: {

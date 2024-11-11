@@ -10,7 +10,9 @@ export default function PortfolioDetail({ data }) {
   if (data === null) {
     return (
       <section className="container mx-auto">
-        <Fade bottom triggerOnce>
+        <Fade 
+// @ts-ignore
+        bottom triggerOnce>
           <div className="flex flex-col w-full justify-center">
             <div className="flex w-full justify-center">
               <img
@@ -39,11 +41,13 @@ export default function PortfolioDetail({ data }) {
 
   return (
     <section className="container mx-auto">
-      <Fade bottom>
+      <Fade 
+// @ts-ignore
+      bottom>
         <Button
           type="link"
           href="/project"
-          className="flex w-40 h-8 text-lg items-center ml-6 sm:ml-20 mt-8 font-light text-gray-400 hover:underline"
+          className="flex w-40 h-8 text-lg items-center ml-6 sm:ml-20 mt-8 font-light dark:text-gray-400 hover:underline"
         >
           <svg
             className="w-5 h-5 text-gray-400 mr-1"
@@ -65,17 +69,21 @@ export default function PortfolioDetail({ data }) {
 
       {data.map((item) => (
         <div className="flex flex-col mt-8 justify-center">
-          <Fade bottom triggerOnce>
-            <h1 className="text-5xl text-theme-blue text-center font-bold">
+          <Fade 
+// @ts-ignore
+          bottom triggerOnce>
+            <h1 className="text-5xl text-transparent bg-gradient-heading bg-clip-text  text-center font-bold">
               {item.title}
             </h1>
 
-            <p className="font-light text-xl text-gray-400 text-center mb-10">
+            <p className="font-light text-xl dark:text-gray-400 text-center mb-10">
               {item.type}
             </p>
           </Fade>
 
-          <Fade bottom delay={300 * 1} triggerOnce>
+          <Fade 
+// @ts-ignore
+          bottom delay={300 * 1} triggerOnce>
             <div className="flex justify-center xl:mb-6">
               <img
                 src={item.imageUrl}
@@ -85,19 +93,21 @@ export default function PortfolioDetail({ data }) {
             </div>
           </Fade>
 
-          <Fade bottom delay={300 * 1} triggerOnce>
+          <Fade 
+// @ts-ignore
+          bottom delay={300 * 1} triggerOnce>
             <div className="flex flex-col mt-16 mb-12 mx-8 sm:mx-16 xl:mx-28">
-              <h1 className="text-3xl text-theme-blue font-bold mb-3">
+              <h1 className="text-3xl text-transparent bg-gradient-heading bg-clip-text font-bold mb-3">
                 Project Detail
               </h1>
 
-              <p className="font-light text-lg text-gray-400 text-justify">
+              <p className="font-light text-lg dark:text-gray-400 text-justify">
                 {item.description}
               </p>
             </div>
 
             <div className="flex flex-col mx-8 sm:mx-16 xl:mx-28">
-              <h1 className="text-3xl text-theme-blue font-bold mb-5">
+              <h1 className="text-3xl text-transparent bg-gradient-heading bg-clip-text font-bold mb-5">
                 Project Responsibilities
               </h1>
 
@@ -110,7 +120,7 @@ export default function PortfolioDetail({ data }) {
               </div>
             </div>
 
-            <p className="font-light italic text-gray-400 mt-16 mx-8 sm:mx-16 xl:mx-28">
+            <p className="font-light italic dark:text-gray-400 mt-16 mx-8 sm:mx-16 xl:mx-28">
               Deployed project :{" "}
               <Button
                 type="link"
