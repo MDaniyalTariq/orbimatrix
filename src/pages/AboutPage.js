@@ -86,7 +86,7 @@ export const AboutPage = () => {
       },
     },
     {
-      name: "Muhammad Suleman",
+      name: "M. Suleman",
       role: "Graphic Designer and video editor",
       image: suleman,
       description:
@@ -139,9 +139,6 @@ export const AboutPage = () => {
                     className="max-lg:mx-auto"
                   />
                 </Fade>
-                <h2 className="px-3 font-bold text-gray-900 mt-44text-3xl  lg:text-5xl font-manrope dark:text-white">
-                  ORBIMATRIX
-                </h2>
               </div>
               <div className="lg:pl-[100px] flex items-center">
                 <div className="w-full data">

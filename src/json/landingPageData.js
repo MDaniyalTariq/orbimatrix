@@ -252,15 +252,14 @@ export const TeamMembers = [
       instagram: "https://instagram.com/maram",
       x: "https://x.com/maram",
       github: "https://github.com/maram",
-      linkedin: "https://linkedin.com/in/maram", // updated to linkedin
+      linkedin: "https://www.linkedin.com/in/maram-gouider-b27634337/", // updated to linkedin
     },
   },
   {
-    name: "Muhammad Suleman",
+    name: "M. Suleman",
     position: "Graphic Designer and video editor",
     imageUrl: suleman,
-    description:
-      "As a Designer, I craft visually compelling designs that align with Orbimatrix's brand and enhance our digital presence.",
+    description: "Graphic Designer and video editor,brand and presence.",
     socialLinks: {
       instagram: "https://instagram.com/maram",
       x: "https://x.com/maram",
