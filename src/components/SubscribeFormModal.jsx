@@ -72,11 +72,11 @@ const SubscribeFormModal = ({ isOpen, onClose }) => {
           onClick={onClose}
         >
           <div
-            className="relative w-full max-w-md max-h-full p-4 bg-white rounded-lg shadow dark:bg-gray-700"
+            className="relative w-full max-w-md max-h-full p-4 bg-white rounded-lg shadow dark:bg-gray-800"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between p-4 border-b rounded-t md:p-5 dark:border-gray-600">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+              <h3 className="text-xl font-semibold text-transparent bg-gradient-heading bg-clip-text ">
                 Subscribe to Our Newsletter
               </h3>
               <button
@@ -145,7 +145,7 @@ const SubscribeFormModal = ({ isOpen, onClose }) => {
 
                 <button
                   type="submit"
-                  className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-theme-blue dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  className="w-full text-white bg-blue-700 hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-transform duration-500 ease-in-out hover:scale-105 "
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Sending..." : "Subscribe Now"}

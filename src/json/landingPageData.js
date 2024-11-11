@@ -236,8 +236,8 @@ export const TeamMembers = [
     socialLinks: {
       instagram: "https://instagram.com/mahnnoor",
       x: "https://x.com/mahnnoor",
-      github: "https://github.com/mahnnoor",
-      linkedin: "https://linkedin.com/in/mahnnoor", // updated to linkedin
+      github: "https://github.com/Mahanoorfarooq",
+      linkedin: "https://www.linkedin.com/in/mahnoor-farooq-649690239/", // updated to linkedin
     },
   },
   {

@@ -8,6 +8,10 @@ import { Swiper } from "swiper";
 import "swiper/css/bundle";
 import Saqib from "../assets/images/TeamMembers/saqib.png";
 import Daniyal from "../assets/images/TeamMembers/daniyal.png";
+import Momin from "../assets/images/TeamMembers/momin.png";
+import Mahnoor from "../assets/images/TeamMembers/mahnoor.png";
+import Maram from "../assets/images/TeamMembers/mahnoor.png";
+import Services from "../assets/images/hero/service2.png";
 import HorizontalScrollBar from "components/HorizontalScrollBar";
 export const AboutPage = () => {
   useEffect(() => {
@@ -85,44 +89,55 @@ export const AboutPage = () => {
       role: "Founder",
       image: Saqib,
       description:
-        "I am the Co-founder & CTO of Orbimatrix and we’ve pushed our limit so far to make it successful.",
+        "As Founder, I am focused on driving Orbimatrix's vision forward, building our team, and expanding our impact in the Web3 and AI spaces.",
       links: {
         x: "https://x.com/neuro_crypt",
         linkedin: "https://www.linkedin.com/in/saqib77/",
       },
     },
     {
+      name: "M Momin",
+      role: "Founder",
+      image: Momin,
+      description:
+        "As a Co-Founder, I’m dedicated to developing and refining Orbimatrix's tech foundations and supporting our long-term goals.",
+      links: {
+        x: "https://x.com/momin99",
+        linkedin: "https://www.linkedin.com/in/momin99/",
+      },
+    },
+    {
       name: "Daniyal Tariq",
-      role: "Full Stack Engineer",
+      role: "CTO",
       image: Daniyal,
       description:
-        "I’ve been Full Stack Engineer for Orbimatrix since the beginning of it and enjoyed every bit.",
+        "As CTO, I lead our technical strategy and oversee the development of Software Development.",
       links: {
         x: "https://x.com/daniyal",
         linkedin: "https://www.linkedin.com/in/daniyal-tariq-wd/",
       },
     },
     {
-      name: "Jawher Khalifa",
-      role: "ML Engineer",
-      image: "Jawher.png",
-      description:
-        "I Worked With ML team, responsible for creating AI Models & Trivia Models.",
-      links: {
-        x: "https://x.com/jawher",
-        linkedin: "https://www.linkedin.com/in/jawherkh-569a33204/",
-      },
-    },
-    {
       name: "Mahnoor Farooq",
       role: "Frontend Developer",
-      image: "mahnoor.png",
+      image: Mahnoor,
       description:
-        "I’ve been Frontend developer for Orbimatrix since the beginning of it and enjoyed every bit.",
+        "As a Frontend Developer, I focus on creating engaging and intuitive user interfaces that enhance the Orbimatrix user experience.",
       links: {
         x: "https://x.com",
         linkedin:
           "https://www.linkedin.com/in/mahnoor-farooq-649690239?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      },
+    },
+    {
+      name: "Maram Gouider",
+      role: "Social Media Marketer",
+      image: Maram,
+      description:
+        "As a Social Media Marketer, I am responsible for building Orbimatrix's online presence and connecting with our community across platforms.",
+      links: {
+        x: "https://x.com",
+        linkedin: "https://www.linkedin.com/in/maram-gouider-b27634337/",
       },
     },
   ];
@@ -142,10 +157,10 @@ export const AboutPage = () => {
 
       <section className="relative ">
         <Fade direction="up" delay={500} triggerOnce>
-          <section className="relative z-0 py-14 lg:py-12 ">
+          <section className="relative z-0 py-14 lg:py-1 ">
             <div className="relative px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
               <h1 className="max-w-2xl mx-auto mb-5 text-4xl font-bold text-center text-gray-800 font-manrope dark:text-gray-300 md:text-5xl md:leading-normal">
-                Get to know the Team behind
+                Get to know the Team behind &nbsp;
                 <span className="text-transparent bg-gradient-heading bg-clip-text">
                   Orbimatrix
                 </span>
@@ -156,7 +171,7 @@ export const AboutPage = () => {
             </div>
           </section>
         </Fade>
-        <section className="relative py-14 lg:py-24">
+        <section className="relative py-14 lg:py-22">
           <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 ">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-9">
               <div className="img-box">
@@ -164,10 +179,13 @@ export const AboutPage = () => {
                   <img
                     src="/Orbimatrix-sm.png"
                     alt="About Us tailwind page"
-                    width={400}
+                    width={300}
                     className="max-lg:mx-auto"
                   />
                 </Fade>
+                <h2 className="px-3 font-bold text-transparent mt-44text-3xl bg-gradient-heading bg-clip-text lg:text-5xl font-manrope dark:text-white">
+                  ORBIMATRIX
+                </h2>
               </div>
               <div className="lg:pl-[100px] flex items-center">
                 <div className="w-full data">
@@ -178,13 +196,13 @@ export const AboutPage = () => {
                   </Fade>
                   <Fade direction="left" triggerOnce>
                     <p className="max-w-2xl mx-auto text-xl font-normal leading-8 text-justify dark:text-gray-400 max-lg:text-center">
-                      Orbimatrix is a leader in digital innovation, merging Web3
-                      technology, AI, and gaming to create cutting-edge, fully
-                      on-chain and off-chain games. By integrating advanced AI
-                      systems, they offer immersive, dynamic gaming experiences
-                      that adapt in real-time. Their solutions push the
-                      boundaries of decentralized gaming, setting new standards
-                      for the future of digital entertainment.
+                      Leading the way in innovation, Orbimatrix develops
+                      state-of-the-art Web3 games and AI-driven SaaS apps that
+                      transform user experiences and generate new value using
+                      blockchain and AI. Our goal is to combine the greatest
+                      aspects of Web3 with AI to provide our users with strong
+                      and user-friendly solutions, with an emphasis on smooth,
+                      rewarding interactions.
                     </p>
                   </Fade>
                 </div>
@@ -199,22 +217,26 @@ export const AboutPage = () => {
                 <div className="w-full data">
                   <Fade direction="right" triggerOnce>
                     <img
-                      src="rewards.jpg"
+                      src={Services}
                       alt="About Us tailwind page"
                       className="block mx-auto lg:hidden mb-9"
                     />
                   </Fade>
                   <Fade direction="left" triggerOnce>
-                    <h2 className="text-4xl font-bold text-transparent font-manrope lg:text-5xl bg-gradient-heading bg-clip-text mb-9 max-lg:text-center">
-                      Earn Crypto Rewards!
+                    <h2 className="text-4xl font-bold text-transparent font-manrope lg:text-4xl bg-gradient-heading bg-clip-text mb-9 max-lg:text-center">
+                      Services You Trust <br />
+                      Products You Can Entrust
                     </h2>
                   </Fade>
                   <Fade direction="right" triggerOnce>
                     <p className="max-w-2xl mx-auto text-xl font-normal leading-8 text-justify dark:text-gray-400 max-lg:text-center">
-                      Challenge your sports knowledge and earn crypto rewards in
-                      our thrilling trivia game. Play, learn, and get rewarded
-                      for every correct answer. Join the game where knowledge
-                      pays off!
+                      Other than just the game and SaaS, Orbimatrix offers a
+                      wide range of software development services. These include
+                      mobile application development, customized AI solutions,
+                      and the web applications. Our team of expert developers
+                      has expertise to provide specific products that suit
+                      different business needs, empowering organizations to grow
+                      and thrive in this ever-evolving digital landscape.
                     </p>
                   </Fade>
                 </div>
@@ -222,7 +244,7 @@ export const AboutPage = () => {
               <div className="img-box ">
                 <Fade direction="right" triggerOnce>
                   <img
-                    src="rewards.jpg"
+                    src={Services}
                     alt="About Us tailwind page"
                     className="hidden lg:block "
                   />
