@@ -25,7 +25,7 @@ export default function Footer() {
     { name: "Privacy Policy", link: "/privacy-policy" },
     { name: "Terms of Service", link: "/terms-of-service" },
     { name: "Disclaimer", link: "/disclaimer" },
-    { name: "Sitemap", link: "/sitemap" },
+    { name: "Sitemap", link: "https://orbimatrix.com/sitemap" },
   ];
   return (
     <footer className="w-full">
