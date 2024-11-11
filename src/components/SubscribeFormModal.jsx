@@ -1,70 +1,47 @@
-import React, { useState, useEffect } from "react";
-import { send } from "@emailjs/browser";
-
-const Notification = ({ message, type, onClose }) => {
-  useEffect(() => {
-    const timer = setTimeout(onClose, 3000);
-    return () => clearTimeout(timer);
-  }, [onClose]);
-
-  return (
-    <div
-      className={`fixed top-4 right-4 p-4 rounded-md shadow-md text-white ${
-        type === "success" ? "bg-green-500" : "bg-red-500"
-      }`}
-    >
-      {message}
-    </div>
-  );
-};
+// @ts-nocheck
+import React, { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SubscribeFormModal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({ name: "", email: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [notification, setNotification] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    send(
-      "service_px4j7oy",
-      "template_52ojlxh",
-      formData,
-      "lB1NqZSQe4BG_i94L"
-    ).then(
-      (result) => {
-        setNotification({
-          message: "Email sent successfully!",
-          type: "success",
-        });
-        setIsSubmitting(false);
+    try {
+      const response = await fetch("https://formspree.io/f/manyjeln", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (response.ok) {
+        toast.success("Email sent successfully!");
+        setFormData({ name: "", email: "" });
         onClose();
-      },
-      (error) => {
-        setNotification({
-          message: "Failed to send email. Please try again.",
-          type: "error",
-        });
-        setIsSubmitting(false);
+      } else {
+        toast.error("Failed to send email. Please try again.");
       }
-    );
+    } catch (error) {
+      toast.error("Error sending email. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <>
-      {notification && (
-        <Notification
-          message={notification.message}
-          type={notification.type}
-          onClose={() => setNotification(null)}
-        />
-      )}
+      <ToastContainer />
 
       {isOpen && (
         <div

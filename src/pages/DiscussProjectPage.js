@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { DiscussForm } from "parts/DiscussForm";
+import DiscussForm from "parts/DiscussForm";
 
 import Header from "parts/Header";
 import Footer from "parts/Footer";
@@ -25,6 +25,7 @@ export const DiscussProjectPage = () => {
     }));
   };
 
+  // Reset form data
   const resetForm = () => {
     setData({
       name: "",
@@ -47,7 +48,7 @@ export const DiscussProjectPage = () => {
       </section>
       <HorizontalScrollBar />
 
-      <DiscussForm data={data} onChange={onChange} resetForm={resetForm} />
+      <DiscussForm />
       <Footer />
     </>
   );
