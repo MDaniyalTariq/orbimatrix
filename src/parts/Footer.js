@@ -43,7 +43,7 @@ export default function Footer() {
               business.
             </p>
             <a
-              href="/discuss-project"
+              href="/contact"
               className="py-2.5 px-5 h-9 block w-fit bg-indigo-600 rounded-full shadow-sm text-xs text-white mx-auto transition-all  duration-500 hover:bg-indigo-700 lg:mx-0"
             >
               Contact us

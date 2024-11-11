@@ -93,9 +93,12 @@ const ContactPage = () => {
                       <h3 className="mb-2 text-lg font-medium leading-6 text-gray-800 dark:text-white">
                         Contact
                       </h3>
-                      <p className="text-gray-500 dark:text-slate-400">
+                      <a
+                        href="mailto:contact@orbimatrix.com"
+                        className="text-gray-500 dark:text-slate-400"
+                      >
                         contact@orbimatrix.com
-                      </p>
+                      </a>
                     </div>
                   </li>
                   <li className="flex">
