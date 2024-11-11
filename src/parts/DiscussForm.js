@@ -25,14 +25,21 @@ const DiscussionForm = () => {
   };
 
   return (
-    <div className="max-w-xl mx-auto py-8 px-4">
-      <h1 className="text-3xl font-bold text-center mb-6 text-gray-800">
-        Let's Discuss Your Project
-      </h1>
-      <p className="text-center text-lg text-gray-500 mb-6">
-        Fill out the form below to discuss your project, and we'll get back to
-        you shortly.
-      </p>
+    <div className="max-w-4xl mx-auto pb-8 mb-12 px-4 ">
+      <div className="max-w-3xl mb-6 text-center sm:text-center md:mx-auto md:mb-12">
+        <p className="text-base font-semibold tracking-wide text-gray-800 uppercase dark:text-white">
+          We're Here to Help
+        </p>
+        <h2 className="mb-4 text-3xl font-bold tracking-tight text-transparent font-heading sm:text-5xl bg-gradient-heading bg-clip-text">
+          Let's Bring Your Vision to Life!
+        </h2>
+        <p className="max-w-3xl mx-auto mt-4 text-xl text-gray-800 dark:text-white">
+          Fill out the form below to share your project details with us. Our
+          team is eager to understand your goals and provide the best solution
+          tailored to your needs. Let's start building something amazing
+          together!
+        </p>
+      </div>
 
       <Formik
         initialValues={{
@@ -66,94 +73,98 @@ const DiscussionForm = () => {
       >
         {({ isSubmitting }) => (
           <Form className="space-y-6">
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-gray-700 font-semibold mb-2"
-              >
-                Your Name
-              </label>
-              <Field
-                id="name"
-                name="name"
-                type="text"
-                className="w-full p-3 border border-gray-300 rounded-lg"
-                placeholder="Enter your name"
-              />
-              <ErrorMessage
-                name="name"
-                component="div"
-                className="text-red-500 text-sm mt-1"
-              />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-gray-700 dark:text-white font-semibold mb-2"
+                >
+                  Your Name
+                </label>
+                <Field
+                  id="name"
+                  name="name"
+                  type="text"
+                  className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white"
+                  placeholder="Enter your name"
+                />
+                <ErrorMessage
+                  name="name"
+                  component="div"
+                  className="text-red-500 text-sm mt-1"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="company"
+                  className="block text-gray-700 dark:text-white font-semibold mb-2"
+                >
+                  Your Company
+                </label>
+                <Field
+                  id="company"
+                  name="company"
+                  type="text"
+                  className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white"
+                  placeholder="Enter your company name"
+                />
+                <ErrorMessage
+                  name="company"
+                  component="div"
+                  className="text-red-500 text-sm mt-1"
+                />
+              </div>
             </div>
 
-            <div>
-              <label
-                htmlFor="company"
-                className="block text-gray-700 font-semibold mb-2"
-              >
-                Your Company
-              </label>
-              <Field
-                id="company"
-                name="company"
-                type="text"
-                className="w-full p-3 border border-gray-300 rounded-lg"
-                placeholder="Enter your company name"
-              />
-              <ErrorMessage
-                name="company"
-                component="div"
-                className="text-red-500 text-sm mt-1"
-              />
-            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-gray-700 dark:text-white font-semibold mb-2"
+                >
+                  Your Email
+                </label>
+                <Field
+                  id="email"
+                  name="email"
+                  type="email"
+                  className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white"
+                  placeholder="Enter your email address"
+                />
+                <ErrorMessage
+                  name="email"
+                  component="div"
+                  className="text-red-500 text-sm mt-1"
+                />
+              </div>
 
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-gray-700 font-semibold mb-2"
-              >
-                Your Email
-              </label>
-              <Field
-                id="email"
-                name="email"
-                type="email"
-                className="w-full p-3 border border-gray-300 rounded-lg"
-                placeholder="Enter your email address"
-              />
-              <ErrorMessage
-                name="email"
-                component="div"
-                className="text-red-500 text-sm mt-1"
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="phone"
-                className="block text-gray-700 font-semibold mb-2"
-              >
-                Your Contact Number
-              </label>
-              <Field
-                id="phone"
-                name="phone"
-                type="text"
-                className="w-full p-3 border border-gray-300 rounded-lg"
-                placeholder="Enter your phone number"
-              />
-              <ErrorMessage
-                name="phone"
-                component="div"
-                className="text-red-500 text-sm mt-1"
-              />
+              <div>
+                <label
+                  htmlFor="phone"
+                  className="block text-gray-700 dark:text-white font-semibold mb-2"
+                >
+                  Your Contact Number
+                </label>
+                <Field
+                  id="phone"
+                  name="phone"
+                  type="text"
+                  className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white"
+                  placeholder="Enter your phone number"
+                />
+                <ErrorMessage
+                  name="phone"
+                  component="div"
+                  className="text-red-500 text-sm mt-1"
+                />
+              </div>
             </div>
 
             <div>
               <label
                 htmlFor="projectIdea"
-                className="block text-gray-700 font-semibold mb-2"
+                className="block text-gray-700 dark:text-white font-semibold mb-2"
               >
                 Project Idea
               </label>
@@ -162,7 +173,7 @@ const DiscussionForm = () => {
                 name="projectIdea"
                 as="textarea"
                 rows="4"
-                className="w-full p-3 border border-gray-300 rounded-lg"
+                className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white"
                 placeholder="Describe your project idea"
               />
               <ErrorMessage
@@ -176,7 +187,7 @@ const DiscussionForm = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition duration-300"
+                className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 transition duration-300"
               >
                 {isSubmitting ? "Submitting..." : "Submit"}
               </button>

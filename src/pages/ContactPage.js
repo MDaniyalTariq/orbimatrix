@@ -66,7 +66,7 @@ const ContactPage = () => {
                         Our Address
                       </h3>
                       <p className="text-gray-500 dark:text-slate-400">
-                        Queens, NYC, USA
+                        NYC, USA
                       </p>
                     </div>
                   </li>
