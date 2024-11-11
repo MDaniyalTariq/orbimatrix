@@ -31,6 +31,7 @@ import Daniyal from "../assets/images/TeamMembers/daniyal.png";
 import Mahnoor from "../assets/images/TeamMembers/mahnoor.png";
 import Momin from "../assets/images/TeamMembers/momin.png";
 import Maram from "../assets/images/TeamMembers/maram.png";
+import suleman from "../assets/images/TeamMembers/suleman.png";
 
 export const Services = [
   {
@@ -245,6 +246,19 @@ export const TeamMembers = [
     name: "Maram Guidah",
     position: "Social Media Marketer",
     imageUrl: Maram,
+    description:
+      "Social Media Marketer, crafting strategies for growing brand presence.",
+    socialLinks: {
+      instagram: "https://instagram.com/maram",
+      x: "https://x.com/maram",
+      github: "https://github.com/maram",
+      linkedin: "https://linkedin.com/in/maram", // updated to linkedin
+    },
+  },
+  {
+    name: "Suleman",
+    position: "Design Lead",
+    imageUrl: suleman,
     description:
       "Social Media Marketer, crafting strategies for growing brand presence.",
     socialLinks: {

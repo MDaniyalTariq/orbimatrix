@@ -11,6 +11,7 @@ import Daniyal from "../assets/images/TeamMembers/daniyal.png";
 import Momin from "../assets/images/TeamMembers/momin.png";
 import Mahnoor from "../assets/images/TeamMembers/mahnoor.png";
 import Maram from "../assets/images/TeamMembers/maram.png";
+import suleman from "../assets/images/TeamMembers/suleman.png";
 
 import Services from "../assets/images/hero/service2.png";
 import HorizontalScrollBar from "components/HorizontalScrollBar";
@@ -133,6 +134,17 @@ export const AboutPage = () => {
       name: "Maram Gouider",
       role: "Social Media Marketer",
       image: Maram,
+      description:
+        "As a Social Media Marketer, I am responsible for building Orbimatrix's online presence and connecting with our community across platforms.",
+      links: {
+        x: "https://x.com",
+        linkedin: "https://www.linkedin.com/in/maram-gouider-b27634337/",
+      },
+    },
+    {
+      name: "Suleman",
+      role: "Design Lead",
+      image: suleman,
       description:
         "As a Social Media Marketer, I am responsible for building Orbimatrix's online presence and connecting with our community across platforms.",
       links: {
