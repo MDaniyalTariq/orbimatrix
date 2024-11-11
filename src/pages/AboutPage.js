@@ -86,14 +86,14 @@ export const AboutPage = () => {
       },
     },
     {
-      name: "Suleman",
-      role: "Design Lead",
+      name: "Muhammad Suleman",
+      role: "Graphic Designer and video editor",
       image: suleman,
       description:
-        "As a Social Media Marketer, I am responsible for building Orbimatrix's online presence and connecting with our community across platforms.",
+        "As a Designer, I craft visually compelling designs that align with Orbimatrix's brand and enhance our digital presence",
       links: {
         x: "https://x.com",
-        linkedin: "https://www.linkedin.com/in/maram-gouider-b27634337/",
+        linkedin: "https://www.linkedin.com/in/muhammad-suleman-34b005323",
       },
     },
   ];
@@ -167,8 +167,8 @@ export const AboutPage = () => {
           </div>
         </section>
         <section className="relative py-14 lg:py-24">
-          <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 ">
-            <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-9 ">
+          <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-9">
               <div className="flex items-center lg:pr-24">
                 <div className="w-full data">
                   <Fade direction="right" triggerOnce>
@@ -189,26 +189,27 @@ export const AboutPage = () => {
                       Other than just the game and SaaS, Orbimatrix offers a
                       wide range of software development services. These include
                       mobile application development, customized AI solutions,
-                      and the web applications. Our team of expert developers
-                      has expertise to provide specific products that suit
+                      and web applications. Our team of expert developers has
+                      the expertise to provide specific products that suit
                       different business needs, empowering organizations to grow
                       and thrive in this ever-evolving digital landscape.
                     </p>
                   </Fade>
                 </div>
               </div>
-              <div className="img-box ">
+              <div className="img-box lg:pl-24">
                 <Fade direction="right" triggerOnce>
                   <img
                     src={Services}
                     alt="About Us tailwind page"
-                    className="hidden lg:block "
+                    className="hidden lg:block"
                   />
                 </Fade>
               </div>
             </div>
           </div>
         </section>
+
         <Fade direction="up" delay={500} triggerOnce>
           <section className="py-20 ">
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">

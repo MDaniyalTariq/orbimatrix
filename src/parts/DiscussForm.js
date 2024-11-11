@@ -1,7 +1,7 @@
 import React from "react";
-// @ts-ignore
+
 import { Formik, Form, Field, ErrorMessage } from "formik";
-// @ts-ignore
+
 import * as Yup from "yup";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";

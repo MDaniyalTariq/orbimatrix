@@ -256,16 +256,16 @@ export const TeamMembers = [
     },
   },
   {
-    name: "Suleman",
-    position: "Design Lead",
+    name: "Muhammad Suleman",
+    position: "Graphic Designer and video editor",
     imageUrl: suleman,
     description:
-      "Social Media Marketer, crafting strategies for growing brand presence.",
+      "As a Designer, I craft visually compelling designs that align with Orbimatrix's brand and enhance our digital presence.",
     socialLinks: {
       instagram: "https://instagram.com/maram",
       x: "https://x.com/maram",
       github: "https://github.com/maram",
-      linkedin: "https://linkedin.com/in/maram", // updated to linkedin
+      linkedin: "https://www.linkedin.com/in/muhammad-suleman-34b005323", // updated to linkedin
     },
   },
 ];
