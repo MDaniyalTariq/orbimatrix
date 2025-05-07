@@ -5,62 +5,10 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 
 export default function Advantage({ data }) {
   const [isDarkMode, setIsDarkMode] = useState(true);
-  const [activeCard, setActiveCard] = useState(null);
+  const [expandedCards, setExpandedCards] = useState([]);
   const [isMobile, setIsMobile] = useState(false);
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { once: false, amount: 0.2 });
-
-  // Check theme and screen size on component mount and when changes occur
-  useEffect(() => {
-    const checkTheme = () => {
-      const isDark = document.documentElement.classList.contains('dark');
-      setIsDarkMode(isDark);
-    };
-
-    const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    // Initial checks
-    checkTheme();
-    checkScreenSize();
-
-    // Set up observers
-    const themeObserver = new MutationObserver(checkTheme);
-    themeObserver.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ['class']
-    });
-
-    // Add resize listener
-    window.addEventListener('resize', checkScreenSize);
-
-    return () => {
-      themeObserver.disconnect();
-      window.removeEventListener('resize', checkScreenSize);
-    };
-  }, []);
-
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.5, ease: "easeOut" }
-    }
-  };
 
   // Enhanced data with additional information
   const enhancedData = [
@@ -130,6 +78,89 @@ export default function Advantage({ data }) {
     }
   ];
 
+  // Auto-expand all cards when section comes into view with staggered animation
+  useEffect(() => {
+    if (isInView) {
+      // Stagger the expansion of cards
+      const expandCards = async () => {
+        // Wait for initial section animation
+        await new Promise(resolve => setTimeout(resolve, 800));
+
+        // Expand cards one by one with a delay
+        for (let i = 0; i < enhancedData.length; i++) {
+          await new Promise(resolve => setTimeout(resolve, 200));
+          setExpandedCards(prev => [...prev, i]);
+        }
+      };
+
+      expandCards();
+
+      return () => {
+        // Cleanup function
+        setExpandedCards([]);
+      };
+    } else {
+      // Collapse all cards when section is out of view
+      setExpandedCards([]);
+    }
+  }, [isInView, enhancedData.length]);
+
+
+
+  // Check theme and screen size on component mount and when changes occur
+  useEffect(() => {
+    const checkTheme = () => {
+      const isDark = document.documentElement.classList.contains('dark');
+      setIsDarkMode(isDark);
+    };
+
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Initial checks
+    checkTheme();
+    checkScreenSize();
+
+    // Set up observers
+    const themeObserver = new MutationObserver(checkTheme);
+    themeObserver.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+
+    // Add resize listener
+    window.addEventListener('resize', checkScreenSize);
+
+    return () => {
+      themeObserver.disconnect();
+      window.removeEventListener('resize', checkScreenSize);
+    };
+  }, []);
+
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.5, ease: "easeOut" }
+    }
+  };
+
+
+
   return (
     <section id="why-choose-us" className="relative py-20 md:py-28 overflow-hidden">
       {/* Background elements */}
@@ -193,9 +224,16 @@ export default function Advantage({ data }) {
                 y: -10,
                 transition: { duration: 0.3 }
               }}
-              onHoverStart={() => !isMobile && setActiveCard(index)}
-              onHoverEnd={() => !isMobile && setActiveCard(null)}
-              onTouchStart={() => isMobile && setActiveCard(activeCard === index ? null : index)}
+              onClick={() => {
+                // Toggle the card in the expandedCards array
+                setExpandedCards(prev => {
+                  if (prev.includes(index)) {
+                    return prev.filter(i => i !== index);
+                  } else {
+                    return [...prev, index];
+                  }
+                });
+              }}
             >
               {/* Card header with colored gradient */}
               <div className={`h-2 w-full bg-gradient-to-r ${item.color}`}></div>
@@ -220,13 +258,18 @@ export default function Advantage({ data }) {
                     {item.description}
                   </p>
 
-                  <AnimatePresence>
-                    {activeCard === index && (
+                  <AnimatePresence mode="wait">
+                    {expandedCards.includes(index) && (
                       <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
+                        key={`card-content-${index}`}
+                        initial={{ opacity: 0, height: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, height: 'auto', scale: 1 }}
+                        exit={{ opacity: 0, height: 0, scale: 0.95 }}
+                        transition={{
+                          duration: 0.4,
+                          ease: [0.04, 0.62, 0.23, 0.98],
+                          height: { duration: 0.4 }
+                        }}
                         className="mt-4"
                       >
                         <div className={`h-0.5 w-full ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'} mb-4`}></div>
@@ -243,7 +286,12 @@ export default function Advantage({ data }) {
                                 className="flex items-start"
                                 initial={{ opacity: 0, x: -10 }}
                                 animate={{ opacity: 1, x: 0 }}
-                                transition={{ delay: idx * 0.1 }}
+                                transition={{
+                                  delay: idx * 0.15,
+                                  type: "spring",
+                                  stiffness: 260,
+                                  damping: 20
+                                }}
                               >
                                 <div className={`flex-shrink-0 w-5 h-5 rounded-full ${item.bgColor} flex items-center justify-center mr-2 mt-0.5`}>
                                   <svg className={`w-3 h-3 ${item.textColor}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -282,6 +330,7 @@ export default function Advantage({ data }) {
                             className={`px-3 py-1.5 rounded-full text-xs font-medium text-white bg-gradient-to-r ${item.color}`}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
+                            onClick={(e) => e.stopPropagation()}
                           >
                             Learn More
                           </motion.a>
@@ -291,17 +340,17 @@ export default function Advantage({ data }) {
                   </AnimatePresence>
                 </div>
 
-                <motion.div
-                  className={`mt-4 w-full h-1 rounded-full ${
-                    activeCard === index
-                      ? `bg-gradient-to-r ${item.color}`
-                      : isDarkMode ? 'bg-gray-700' : 'bg-gray-200'
-                  }`}
-                  animate={{
-                    width: activeCard === index ? '100%' : '30%'
-                  }}
-                  transition={{ duration: 0.5 }}
-                />
+                <div className="relative mt-4 w-full h-1 rounded-full overflow-hidden">
+                  <div className={`absolute inset-0 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'}`}></div>
+                  <motion.div
+                    className={`absolute h-full left-0 top-0 bg-gradient-to-r ${item.color}`}
+                    initial={{ width: '30%' }}
+                    animate={{
+                      width: expandedCards.includes(index) ? '100%' : '30%'
+                    }}
+                    transition={{ duration: 0.5 }}
+                  />
+                </div>
               </div>
             </motion.div>
           ))}

@@ -271,7 +271,7 @@ html.dark #services .group:hover {
   #services .absolute.top-4.right-4 {
     @apply top-2 right-2;
   }
-  
+
 }
 
 
@@ -415,6 +415,7 @@ html.dark #projects .project-card:hover {
   will-change: transform;
   position: relative;
   z-index: 1;
+  cursor: pointer;
 }
 
 /* Card hover effects */
