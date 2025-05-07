@@ -5,6 +5,7 @@ import Button from "../elements/Button";
 import { useNavigate } from "react-router-dom";
 import { Portfolios } from "../json/landingPageData";
 import SubscribeFormModal from "components/SubscribeFormModal";
+import { SupportModal } from "./SupportModal";
 export default function Footer() {
   const navigate = useNavigate();
   const maxDisplayedProjects = 4;
@@ -104,21 +105,7 @@ export default function Footer() {
             <h4 className="text-lg text-transparent bg-gradient-heading bg-clip-text font-medium mb-7 ">
               Support
             </h4>
-            <ul className="text-sm  transition-all duration-500">
-              {supportItems.map((item, index) => (
-                <li
-                  key={index}
-                  className={index !== menuItems.length - 1 ? "mb-6" : ""}
-                >
-                  <a
-                    href={item.link}
-                    className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300"
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <SupportModal />
           </div>
           <div>
             <div className="lg:mx-auto text-left">

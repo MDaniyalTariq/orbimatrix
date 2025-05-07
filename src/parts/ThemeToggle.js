@@ -1,13 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Transition } from "@headlessui/react";
+import React, { useState, useEffect } from "react";
 import { FaSun, FaMoon } from "react-icons/fa";
 
 const ThemeToggle = () => {
   const storedTheme = localStorage.getItem("theme");
-  const defaultTheme = storedTheme ? storedTheme : "dark"; 
+  const defaultTheme = storedTheme ? storedTheme : "dark";
   const [isDarkMode, setIsDarkMode] = useState(defaultTheme === "dark");
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
     if (defaultTheme === "dark") {
@@ -18,67 +16,50 @@ const ThemeToggle = () => {
   }, [defaultTheme]);
 
   const toggleDarkMode = () => {
-    const newTheme = isDarkMode ? "light" : "dark";
+    setIsAnimating(true);
 
-    if (newTheme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+    setTimeout(() => {
+      const newTheme = isDarkMode ? "light" : "dark";
 
-    setIsDarkMode(!isDarkMode);
-    localStorage.setItem("theme", newTheme);
+      if (newTheme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+
+      setIsDarkMode(!isDarkMode);
+      localStorage.setItem("theme", newTheme);
+
+      setTimeout(() => {
+        setIsAnimating(false);
+      }, 300);
+    }, 150);
   };
-
-  const handleClickOutside = (event) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      setIsDropdownOpen(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
 
   return (
-    <div className="relative z-50" ref={dropdownRef}>
+    <div className="relative z-50">
       <button
-        aria-label="Toggle dropdown"
-        className="relative focus:outline-none"
-        onClick={() => setIsDropdownOpen((prev) => !prev)}
+        aria-label="Toggle theme"
+        className={`relative focus:outline-none w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
+          isDarkMode
+            ? 'bg-gray-800 text-yellow-400 hover:bg-gray-700'
+            : 'bg-blue-100 text-blue-900 hover:bg-blue-200'
+        } active:scale-95`}
+        onClick={toggleDarkMode}
       >
-        {isDarkMode ? (
-          <FaSun className="w-6 h-6 text-yellow-500" />
-        ) : (
-          <FaMoon className="w-6 h-6 text-gray-700" />
-        )}
-      </button>
+        <div className={`absolute inset-0 rounded-full ${isAnimating ? 'animate-ping opacity-30' : 'opacity-0'} ${
+          isDarkMode ? 'bg-yellow-400' : 'bg-blue-400'
+        }`}></div>
 
-      <Transition
-        show={isDropdownOpen}
-        enter="transition ease-out duration-200"
-        enterFrom="opacity-0 transform scale-95"
-        enterTo="opacity-100 transform scale-100"
-        leave="transition ease-in duration-100"
-        leaveFrom="opacity-100 transform scale-100"
-        leaveTo="opacity-0 transform scale-95"
-      >
-        <div className="absolute right-0 z-50 w-48 mt-2 bg-white rounded-md shadow-lg dark:bg-gray-800">
-          <ul className="py-1">
-            <li>
-              <button
-                className="block w-full px-4 py-2 text-sm text-left text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
-                onClick={toggleDarkMode}
-              >
-                {isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
-              </button>
-            </li>
-          </ul>
+        <div className="relative transition-all duration-500 transform">
+          {isDarkMode ? (
+            <FaSun className={`w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 ${isAnimating ? 'animate-spin' : ''}`} />
+          ) : (
+            <FaMoon className={`w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 ${isAnimating ? 'animate-spin' : ''}`} />
+          )}
         </div>
-      </Transition>
+        <span className="sr-only">{isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}</span>
+      </button>
     </div>
   );
 };
