@@ -107,9 +107,40 @@ const Header = () => {
           <BrandIcon />
         </div>
 
+        <nav className="hidden lg:block">
+          <ul className="flex-row items-center mt-0 tracking-widest text-theme-blue dark:text-secondry-white flex">
+            {["/", "/team", "/about", "/contact", "/project"].map((link) => (
+              <li key={link} className="py-2 lg:py-0 z-50 relative group">
+                <Button
+                  className={`${
+                    path === link
+                      ? "text-theme-purple dark:text-theme-purple"
+                      : "text-theme-blue dark:text-secondry-white"
+                  } font-medium xl:text-lg text-sm px-5 py-2 transition-all duration-300 hover:text-theme-purple dark:hover:text-theme-purple relative`}
+                  href={link}
+                >
+                  {link === "/"
+                    ? "Home"
+                    : link.slice(1).charAt(0).toUpperCase() + link.slice(2)}
+                  {path === link && (
+                    <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-0.5 bg-theme-purple rounded-full"></span>
+                  )}
+                  <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-theme-purple rounded-full transition-all duration-300 group-hover:w-1/2"></span>
+                </Button>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
         <div className="flex items-center justify-end space-x-3 sm:space-x-4">
           <div className="relative">
             <ThemeToggle />
+          </div>
+
+          <div className="hidden lg:block">
+            <div className="w-[160px]">
+              <DiscussButton />
+            </div>
           </div>
 
           <button
@@ -140,37 +171,6 @@ const Header = () => {
           </button>
         </div>
 
-        <nav className="hidden lg:block">
-          <ul className="flex-row items-center mt-0 tracking-widest text-theme-blue dark:text-secondry-white flex">
-            {["/", "/team", "/about", "/contact", "/project"].map((link) => (
-              <li key={link} className="py-2 lg:py-0 z-50 relative group">
-                <Button
-                  className={`${
-                    path === link
-                      ? "text-theme-purple dark:text-theme-purple"
-                      : "text-theme-blue dark:text-secondry-white"
-                  } font-medium xl:text-lg text-sm px-5 py-2 transition-all duration-300 hover:text-theme-purple dark:hover:text-theme-purple relative`}
-                  href={link}
-                >
-                  {link === "/"
-                    ? "Home"
-                    : link.slice(1).charAt(0).toUpperCase() + link.slice(2)}
-                  {path === link && (
-                    <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-0.5 bg-theme-purple rounded-full"></span>
-                  )}
-                  <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-theme-purple rounded-full transition-all duration-300 group-hover:w-1/2"></span>
-                </Button>
-              </li>
-            ))}
-
-            <li className="z-50 ml-4 flex items-center">
-              <div className="w-[160px]">
-                <DiscussButton />
-              </div>
-            </li>
-          </ul>
-        </nav>
-
         <Transition
           show={isCollapse}
           enter="transition-all duration-300"
@@ -186,7 +186,7 @@ const Header = () => {
               <div className="p-4 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
                 <div className="flex items-center justify-between">
                   <div className="flex flex-col">
-                    <p className="text-base font-medium text-gray-700 dark:text-gray-200">Navigation</p>
+                    <p className="text-base font-medium text-gray-700 dark:text-gray-200">Menu</p>
                     <div className="flex items-center mt-1 text-xs text-gray-500 dark:text-gray-400">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -268,7 +268,7 @@ const Header = () => {
 
               <div className="p-6 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 flex flex-col items-center">
                 <p className="text-sm font-medium text-gray-700 dark:text-gray-200 mb-5">Ready to start a project?</p>
-                <div className="flex justify-center w-full px-6 sm:px-8">
+                <div className="flex justify-center w-full">
                   <div className="w-full max-w-[240px]">
                     <DiscussButton onClick={() => setIsCollapse(false)} />
                   </div>

@@ -11,12 +11,24 @@ import { ProjectDetailPage } from "pages/ProjectDetailPage";
 import { DiscussProjectPage } from "pages/DiscussProjectPage";
 import { AboutPage } from "pages/AboutPage";
 import "./assets/css/styles.css";
-import React from "react";
+import React, { useEffect } from "react";
 import ContactPage from "pages/ContactPage";
 import { LiveChatWidget } from "@livechat/widget-react";
 
 function App() {
-  const targetDate = "2024-12-31T23:59:59";
+  // Initialize theme on app load
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("theme") || "dark";
+
+    if (storedTheme === "dark") {
+      document.documentElement.classList.add("dark");
+      document.body.style.backgroundColor = "#191C27"; // dark-bg color
+    } else {
+      document.documentElement.classList.remove("dark");
+      document.body.style.backgroundColor = "#ffffff"; // light background
+    }
+  }, []);
+
   return (
     <>
       <LiveChatWidget license="18854253" />

@@ -7,13 +7,21 @@ const ThemeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(defaultTheme === "dark");
   const [isAnimating, setIsAnimating] = useState(false);
 
+  // Apply theme on initial load
   useEffect(() => {
-    if (defaultTheme === "dark") {
+    applyTheme(defaultTheme);
+  }, [defaultTheme]);
+
+  // Function to apply theme to document and update body background
+  const applyTheme = (theme) => {
+    if (theme === "dark") {
       document.documentElement.classList.add("dark");
+      document.body.style.backgroundColor = "#191C27"; // dark-bg color
     } else {
       document.documentElement.classList.remove("dark");
+      document.body.style.backgroundColor = "#ffffff"; // light background
     }
-  }, [defaultTheme]);
+  };
 
   const toggleDarkMode = () => {
     setIsAnimating(true);
@@ -21,11 +29,8 @@ const ThemeToggle = () => {
     setTimeout(() => {
       const newTheme = isDarkMode ? "light" : "dark";
 
-      if (newTheme === "dark") {
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-      }
+      // Apply the theme changes
+      applyTheme(newTheme);
 
       setIsDarkMode(!isDarkMode);
       localStorage.setItem("theme", newTheme);

@@ -38,45 +38,91 @@ export const Services = [
     title: "Web Development",
     imageUrl: Web,
     animation: "left",
+    icon: "💻",
     description:
-      "Craft dynamic, responsive websites tailored to your business needs, ensuring an engaging user experience and robust functionality across all platforms.",
+      "Crafting responsive, SEO-friendly websites and web apps with React, Next.js, and scalable back-end APIs to deliver seamless user experiences across devices.",
+    features: [
+      "Modern React & Next.js applications",
+      "Responsive design for all devices",
+      "SEO optimization & performance",
+      "Scalable API architecture",
+      "Progressive Web Apps (PWAs)"
+    ]
   },
   {
-    title: "AI Custom Solutions",
-    imageUrl: UIUX,
+    title: "Smart Contracts",
+    imageUrl: smart,
     animation: "right",
+    icon: "🔗",
     description:
-      "Leverage cutting-edge AI technology to build tailored solutions that address specific business challenges, improve decision-making, and optimize workflows.",
+      "Designing, auditing, and deploying secure on-chain logic on Solana and EVM-compatible chains—covering token standards, DeFi primitives, and gas-efficient contract patterns.",
+    features: [
+      "ERC/SPL token development",
+      "DeFi protocol engineering",
+      "Security audits & optimization",
+      "Cross-chain compatibility",
+      "Gas-efficient patterns"
+    ]
   },
   {
-    title: "Web3 Games",
+    title: "Web3 Gaming",
     imageUrl: web3,
     animation: "left",
+    icon: "🎮",
     description:
-      "Develop immersive Web3 games that integrate blockchain technology, offering unique in-game assets, decentralized economies, and player-owned experiences.",
+      "Building fully on-chain play-to-earn games with integrated NFT minting, tokenomics design, and gas abstraction for frictionless user onboarding.",
+    features: [
+      "On-chain game mechanics",
+      "NFT integration & marketplaces",
+      "Play-to-earn tokenomics",
+      "Gas abstraction layers",
+      "Cross-platform compatibility"
+    ]
   },
   {
-    title: "Smart Contracts & Auditing",
-    imageUrl: smart,
-    animation: "up",
-    description:
-      "Build secure and efficient smart contracts that automate transactions, streamline processes, and enhance trust in blockchain environments.",
-  },
-
-  {
-    title: "Chatbots Making",
-    imageUrl: chatbot,
-    animation: "up",
-    description:
-      "Create intelligent chatbots designed to enhance customer interactions, automate responses, and provide real-time support across various platforms.",
-  },
-
-  {
-    title: "Mobile Development",
+    title: "Mobile App Development",
     imageUrl: Mobile,
-    animation: "right",
+    animation: "up",
+    icon: "📱",
     description:
-      "Leverage cutting-edge AI technology to build tailored solutions that address specific business challenges, improve decision-making, and optimize workflows.",
+      "Developing native and cross-platform apps (iOS, Android, React Native, Flutter) with in-app wallets, secure key management, and App Store/Play Store publishing.",
+    features: [
+      "Native iOS & Android apps",
+      "React Native & Flutter expertise",
+      "Crypto wallet integration",
+      "Secure biometric authentication",
+      "App store optimization"
+    ]
+  },
+  {
+    title: "Agentic AI",
+    imageUrl: UIUX,
+    animation: "up",
+    icon: "🤖",
+    description:
+      "Implementing autonomous AI agents for intelligent automation, custom LLM fine-tuning, and seamless orchestration across your business workflows.",
+    features: [
+      "Custom LLM fine-tuning",
+      "Multi-agent systems",
+      "Business process automation",
+      "Knowledge retrieval systems",
+      "AI-powered analytics"
+    ]
+  },
+  {
+    title: "AR/VR Experiences",
+    imageUrl: chatbot,
+    animation: "right",
+    icon: "🥽",
+    description:
+      "Creating immersive augmented and virtual reality experiences for training, entertainment, and marketing with WebXR, Unity, and Unreal Engine integration.",
+    features: [
+      "WebXR applications",
+      "Unity & Unreal development",
+      "3D modeling & animation",
+      "Spatial computing",
+      "Cross-platform deployment"
+    ]
   },
 ];
 

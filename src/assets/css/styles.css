@@ -112,7 +112,39 @@ body {
 }
 
 .hero {
-  @apply container flex flex-col px-5 mx-auto;
+  @apply container flex flex-col px-0 mx-auto min-h-[calc(100vh-6rem)] md:min-h-0;
+}
+
+.hero > div {
+  @apply gap-8 md:gap-12 items-start;
+}
+
+/* Hero section animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+.animate-rotate-slow {
+  animation: rotate-slow 15s linear infinite;
 }
 
 .portofolio-card:hover .img-hover {
@@ -143,9 +175,104 @@ body {
   }
 
   .hero {
-    @apply container flex-row mx-auto;
+    @apply container mx-auto py-12;
   }
 }
+
+@media (min-width: 1280px) {
+  .hero {
+    @apply py-16;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    @apply py-4;
+  }
+}
+
+/* Enhanced Services Section */
+#services .line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+#services .bg-gradient-heading {
+  @apply bg-gradient-to-r from-blue-500 to-purple-600;
+}
+
+#services .backdrop-blur-sm {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Enhanced service cards */
+#services .group:hover .w-16 {
+  @apply w-24 transition-all duration-500;
+}
+
+#services .group {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Light mode specific styles */
+html:not(.dark) #services .group {
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+}
+
+html:not(.dark) #services .group:hover {
+  box-shadow: 0 20px 40px -5px rgba(139, 92, 246, 0.15);
+}
+
+/* Dark mode specific styles */
+html.dark #services .group {
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.2);
+}
+
+html.dark #services .group:hover {
+  box-shadow: 0 20px 40px -5px rgba(139, 92, 246, 0.2);
+}
+
+/* Responsive adjustments for services */
+@media (max-width: 640px) {
+  #services .grid {
+    @apply gap-6;
+  }
+
+  #services h2 {
+    @apply text-3xl;
+  }
+
+  #services p.max-w-2xl {
+    @apply text-base;
+  }
+
+  #services .h-52 {
+    @apply h-44;
+  }
+}
+
+@media (max-width: 480px) {
+  #services .p-6 {
+    @apply p-4;
+  }
+
+  #services .text-3xl {
+    @apply text-2xl;
+  }
+
+  #services .text-xl {
+    @apply text-lg;
+  }
+
+  #services .absolute.top-4.right-4 {
+    @apply top-2 right-2;
+  }
+}
+
 
 /* Custom styles for Swiper navigation buttons */
 .swiper-button-next,
