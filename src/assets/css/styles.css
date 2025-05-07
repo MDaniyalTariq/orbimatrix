@@ -274,6 +274,307 @@ html.dark #services .group:hover {
 }
 
 
+/* Enhanced Projects Section */
+#projects .line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  overflow: hidden;
+}
+
+#projects .group {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+/* Enhanced project cards */
+.project-card {
+  isolation: isolate;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Light mode specific styles for projects */
+html:not(.dark) #projects .project-card {
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+}
+
+html:not(.dark) #projects .project-card:hover {
+  box-shadow: 0 20px 40px -5px rgba(139, 92, 246, 0.15);
+}
+
+/* Dark mode specific styles for projects */
+html.dark #projects .project-card {
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.2);
+}
+
+html.dark #projects .project-card:hover {
+  box-shadow: 0 20px 40px -5px rgba(139, 92, 246, 0.2);
+}
+
+/* Project card hover effects */
+#projects .project-card:hover img {
+  transform: scale(1.05);
+}
+
+#projects .project-card img {
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+  #projects .project-card:active {
+    transform: scale(0.98);
+  }
+
+  #projects .project-card:active img {
+    transform: scale(1.02);
+  }
+}
+
+/* Responsive adjustments for projects */
+@media (max-width: 768px) {
+  #projects .h-48 {
+    height: 180px;
+  }
+
+  #projects .grid {
+    gap: 1.25rem;
+  }
+
+  #projects .text-lg {
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+
+  #projects .text-xs {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 640px) {
+  #projects .h-48 {
+    height: 160px;
+  }
+
+  #projects .p-5 {
+    padding: 0.875rem;
+  }
+
+  #projects .gap-1\.5 {
+    gap: 0.25rem;
+  }
+
+  #projects .mb-3 {
+    margin-bottom: 0.5rem;
+  }
+
+  #projects .space-x-1\.5 > * + * {
+    margin-left: 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #projects .grid {
+    gap: 1rem;
+  }
+
+  #projects .h-48 {
+    height: 140px;
+  }
+
+  #projects .absolute.top-4.left-4 {
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+
+  #projects .px-3 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  #projects .py-1 {
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
+  }
+
+  #projects .text-lg {
+    font-size: 1rem;
+  }
+}
+
+/* Enhanced Why Choose Us Section */
+#why-choose-us .advantage-card {
+  isolation: isolate;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform;
+  position: relative;
+  z-index: 1;
+}
+
+/* Card hover effects */
+#why-choose-us .advantage-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+html.dark #why-choose-us .advantage-card::before {
+  background: radial-gradient(circle at top right, rgba(139, 92, 246, 0.15), transparent 70%);
+}
+
+html:not(.dark) #why-choose-us .advantage-card::before {
+  background: radial-gradient(circle at top right, rgba(139, 92, 246, 0.1), transparent 70%);
+}
+
+#why-choose-us .advantage-card:hover::before {
+  opacity: 1;
+}
+
+/* Light mode specific styles for advantage cards */
+html:not(.dark) #why-choose-us .advantage-card {
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+}
+
+html:not(.dark) #why-choose-us .advantage-card:hover {
+  box-shadow: 0 20px 40px -5px rgba(139, 92, 246, 0.15);
+}
+
+/* Dark mode specific styles for advantage cards */
+html.dark #why-choose-us .advantage-card {
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.2);
+}
+
+html.dark #why-choose-us .advantage-card:hover {
+  box-shadow: 0 20px 40px -5px rgba(139, 92, 246, 0.2);
+}
+
+/* Quote styling */
+#why-choose-us .advantage-card svg[viewBox="0 0 24 24"] path {
+  fill: currentColor;
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+  #why-choose-us .advantage-card:active {
+    transform: scale(0.98);
+  }
+
+  #why-choose-us .advantage-card:active::before {
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments for Why Choose Us section */
+@media (max-width: 1024px) {
+  #why-choose-us .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  #why-choose-us .grid {
+    gap: 1.25rem;
+  }
+
+  #why-choose-us .p-6 {
+    padding: 1.25rem;
+  }
+
+  #why-choose-us .w-14 {
+    width: 3rem;
+  }
+
+  #why-choose-us .h-14 {
+    height: 3rem;
+  }
+
+  #why-choose-us .text-2xl {
+    font-size: 1.25rem;
+  }
+
+  #why-choose-us .space-y-2 {
+    margin-top: 0.5rem;
+  }
+
+  #why-choose-us .space-y-2 > * + * {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  #why-choose-us .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  #why-choose-us .p-6 {
+    padding: 1rem;
+  }
+
+  #why-choose-us .mb-6 {
+    margin-bottom: 1rem;
+  }
+
+  #why-choose-us .w-14 {
+    width: 2.5rem;
+  }
+
+  #why-choose-us .h-14 {
+    height: 2.5rem;
+  }
+
+  #why-choose-us .text-xl {
+    font-size: 1.1rem;
+  }
+
+  #why-choose-us .text-2xl {
+    font-size: 1.1rem;
+  }
+
+  #why-choose-us .flex-wrap {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  #why-choose-us .p-6 {
+    padding: 0.875rem;
+  }
+
+  #why-choose-us .text-xs {
+    font-size: 0.65rem;
+  }
+
+  #why-choose-us .w-5 {
+    width: 1rem;
+  }
+
+  #why-choose-us .h-5 {
+    height: 1rem;
+  }
+
+  #why-choose-us .w-12 {
+    width: 2.5rem;
+  }
+
+  #why-choose-us .h-12 {
+    height: 2.5rem;
+  }
+
+  #why-choose-us .px-3 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
 /* Custom styles for Swiper navigation buttons */
 .swiper-button-next,
 .swiper-button-prev {
