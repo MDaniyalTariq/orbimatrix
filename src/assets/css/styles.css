@@ -631,6 +631,239 @@ html.dark #why-choose-us .advantage-card:hover {
   /* Darker background on hover */
 }
 
+/* Testimonials section animations */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Marquee animations for testimonials */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Marquee container styles */
+.marquee-container,
+.marquee-container-reverse {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent 100%);
+}
+
+.marquee-container::before,
+.marquee-container-reverse::before,
+.marquee-container::after,
+.marquee-container-reverse::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee-container::before,
+.marquee-container-reverse::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.marquee-container::after,
+.marquee-container-reverse::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.dark .marquee-container::before,
+.dark .marquee-container-reverse::before {
+  background: linear-gradient(to right, rgba(25, 28, 39, 1), rgba(25, 28, 39, 0));
+}
+
+.dark .marquee-container::after,
+.dark .marquee-container-reverse::after {
+  background: linear-gradient(to left, rgba(25, 28, 39, 1), rgba(25, 28, 39, 0));
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee 60s linear infinite;
+  padding: 30px 0;
+  will-change: transform;
+}
+
+.marquee-content-reverse {
+  display: flex;
+  animation: marquee-reverse 60s linear infinite;
+  padding: 30px 0;
+  will-change: transform;
+}
+
+/* Pause animations on hover */
+.marquee-container:hover .marquee-content,
+.marquee-container-reverse:hover .marquee-content-reverse {
+  animation-play-state: paused;
+}
+
+/* Add subtle shadow to the container */
+#testimonials .marquee-container,
+#testimonials .marquee-container-reverse {
+  position: relative;
+}
+
+#testimonials .marquee-container::after,
+#testimonials .marquee-container-reverse::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.05), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Responsive adjustments for testimonials */
+@media (max-width: 1280px) {
+  .marquee-content,
+  .marquee-content-reverse {
+    animation-duration: 50s;
+  }
+
+  #testimonials .marquee-container,
+  #testimonials .marquee-container-reverse {
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent 100%);
+  }
+}
+
+@media (max-width: 1024px) {
+  .marquee-content,
+  .marquee-content-reverse {
+    animation-duration: 45s;
+    padding: 25px 0;
+  }
+
+  .marquee-container::before,
+  .marquee-container-reverse::before,
+  .marquee-container::after,
+  .marquee-container-reverse::after {
+    width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee-content,
+  .marquee-content-reverse {
+    animation-duration: 35s;
+    padding: 20px 0;
+  }
+
+  .marquee-container::before,
+  .marquee-container-reverse::before,
+  .marquee-container::after,
+  .marquee-container-reverse::after {
+    width: 70px;
+  }
+
+  #testimonials h2 {
+    font-size: 2.5rem;
+  }
+
+  #testimonials p.text-xl {
+    font-size: 1.125rem;
+  }
+
+  #testimonials .marquee-content > div,
+  #testimonials .marquee-content-reverse > div {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .marquee-content,
+  .marquee-content-reverse {
+    animation-duration: 30s;
+    padding: 15px 0;
+  }
+
+  .marquee-container::before,
+  .marquee-container-reverse::before,
+  .marquee-container::after,
+  .marquee-container-reverse::after {
+    width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .marquee-content,
+  .marquee-content-reverse {
+    animation-duration: 25s;
+    padding: 12px 0;
+  }
+
+  .marquee-container::before,
+  .marquee-container-reverse::before,
+  .marquee-container::after,
+  .marquee-container-reverse::after {
+    width: 40px;
+  }
+
+  #testimonials h2 {
+    font-size: 2rem;
+  }
+
+  #testimonials p.text-xl {
+    font-size: 1rem;
+  }
+
+  #testimonials .marquee-content > div,
+  #testimonials .marquee-content-reverse > div {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
 h1,
 h2,
 h3,
